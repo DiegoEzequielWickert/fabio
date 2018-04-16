@@ -15,6 +15,8 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
+
+
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
@@ -23,7 +25,7 @@
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">home</i></a>
         <li><a href="#">Inicio</a></li>
         <li><a href="#">A Crescer</a></li>
-        <li><a href="#">Serviços</a></li>
+        <li><a href="#serviços">Serviços</a></li>
         <li><a href="#">Clientes</a></li>
         <li><a href="#">Representantes</a></li>
         <li><a href="#contato">Contatos</a></li>
@@ -33,7 +35,7 @@
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">A Crescer</a></li>
       </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">apps</i></a>
     </div>
   </nav>
 
@@ -43,7 +45,7 @@
         <br><br>
         <h1 class="header center teal-text text-lighten-2">Crescer Contabilidade</h1>
         <div class="row center">
-          <h5 class="header col s12 text-green text-darken-2"> Crescendo com  você!  </h5>
+          <h5 class="header col s12 text-blue text-darken-2"> Crescendo com  você!  </h5>
         </div>
         <div class="row center">
           <a href="#contato" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Quero entrar em contato!</a>
@@ -93,8 +95,10 @@
   </div>
 
 
-  <div class="row center">
-    <div class="col s12 m3">
+  <div class="container">
+    <div class="row">
+       <h1 id="serviços" class="header center teal-text text-lighten-2">Nossos Serviços</h1>
+    <div class="col s12 center m3 l3">
       <div class="card">
         <div class="card-image">
           <img class="responsive-img "src="img/controle-gerencial.jpg">
@@ -104,9 +108,12 @@
         <div class="card-content ">
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
+         <div class="card-action">
+          <a href="auditoria/">Saiba Mais</a>
+        </div>
       </div>
     </div>
-    <div class="col s12 m3">
+    <div class="col s12 m4 l3">
       <div class="card">
         <div class="card-image">
           <img class="responsive-img "src="img/auditoria.png">
@@ -116,9 +123,12 @@
         <div class="card-content ">
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
+        <div class="card-action">
+          <a href="auditoria/">Saiba Mais</a>
+        </div>
       </div>
     </div>
-
+  </div> <!-- fim do row-->
   </div> <!-- fim dos paineis-->
 
 
@@ -160,11 +170,11 @@
   </div>
 
   <footer class="page-footer teal" id='contato'>
-    <div class="container">
+    <div class="container ">
       <div class="row">
-        <div class="col l6 s12">
+        <div class="col l6 s12 ">
           <h5 class="white-text">Contatos</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <p class="grey-text text-lighten-4"> Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem.</p>
 
 
         </div>
