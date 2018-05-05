@@ -55,6 +55,18 @@ p {
 footer.page-footer {
   margin: 0;
 }
-.esquerda{
-  display: block;
+.padrao{
+  color: #176EAC !important;
+}
+.padrao-fundo{
+    background-color: #176EAC!important;
+}
+.logo-nav{
+  width: 70px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.logo-centro{
+  margin-top:160px;
+  margin-bottom: 190px;
 }

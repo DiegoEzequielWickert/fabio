@@ -4,12 +4,12 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title> Inicio | Crescer Contabilidade</title>
+  <title> Serviços| Crescer Contabilidade</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 
 
@@ -37,16 +37,14 @@
   <div class="navbar-fixed ">
     <nav>
       <div class="nav-wrapper white">
-        <a href="#" class="brand-logo padrao">
-          <img src="img/logo.png" class="responsive-img logo-nav" alt="Logo">
-        </a>
-        <ul class="right hide-on-med-and-down ">
-          <li><a href="index.php" class="padrao">Inicio</a></li>
-          <li><a href="#" class="padrao">A Crescer</a></li>
-          <li><a href="serviços/" class="padrao">Serviços</a></li>
-          <li><a href="clientes/" class="padrao">Clientes</a></li>
-          <li><a href="representantes/" class="padrao">Representantes</a></li>
-          <li><a href="contato/" class="padrao">Contatos</a></li>
+        <a href="#!" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="#">A Crescer</a></li>
+          <li><a href="serviços/">Serviços</a></li>
+          <li><a href="clientes/">Clientes</a></li>
+          <li><a href="representantes/">Representantes</a></li>
+          <li><a href="contato/">Contatos</a></li>
         </ul>
       </div>
     </nav>
@@ -57,17 +55,11 @@
     <div class="section">
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m15 center logo-centro">
-            <div class="center-align logo">
-            <img src="img/logo1.png" class="responsive-img " width="400px" alt=" Logomarca Crecer Contabilidade">
-              <h5 class="center-align padrao">Crescer Contabilidade </h5>
-            </div>
-            <div class="row">
-              <div class="row"></div>
-              <div class="col m12 l12">
-                <a class="btn-floating pulse"><i class="material-icons center padrao-fundo">keyboard_arrow_down</i></a>
-              </div>
-            </div>
+        <div class="col s12 m10 center">
+            
+            
+            <img src="../img/logo1.png" class="responsive-img" alt=" Logomarca Crecer Contabilidade">
+            
         </div>
 
         
@@ -79,7 +71,7 @@
       
   <!-- FIM DOS CLIENTES-->
 
-  <footer class="page-footer padrao-fundo" id='contato'>
+  <footer class="page-footer blue" id='contato'>
     <div class="container ">
       <div class="row">
         <div class="col l6 s12 ">
@@ -108,14 +100,14 @@
             <li><a class="white-text uteis" href="#!">Clientes</a></li>
             <li><a class="white-text uteis" href="#!">Representantes</a></li>
             <li><a class="white-text uteis" href="#!">Contatos</a></li>
-            <li><a class="white-text uteis" href="/login/">Login</a></li>
+            <li><a class="white-text uteis" href="login/">Login</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-        By <a class="brown-text text-lighten-3" href="#">WebFinatto.com</a>
+        By <a class="brown-text text-lighten-3" href="#">Crescer Contabilidade</a>
       </div>
     </div>
   </footer>
@@ -123,9 +115,9 @@
 
   <!--  Scripts-->
   
-  <script src="../jquery/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="../../jquery/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
   <script>
       var elem = document.querySelector('.carousel');
       var instance = M.Carousel.init(elem, options);

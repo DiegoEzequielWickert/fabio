@@ -28,7 +28,7 @@ PAGINAS
 		 Contábil
 		 Fiscal
 		 Pessoal
-		 Prividência Solcial
+		 Prividência Social
 		 Societário
 		 
 
