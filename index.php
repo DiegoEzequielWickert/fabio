@@ -48,7 +48,7 @@
               <div class="row"></div>
               <div class="col m12 l12">
                 <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-                <a class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
+                <a  href="#sobre" class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
               </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
   </div>
   <!-- Nova camada-->
   <div class="padrao2-fundo">
-    <div class="section">
+    <div id="sobre" class="section">
       <div class="row">
         <div class="col l12 m12 s12 x12">
           <h3 class="center-align">Sobre a Crescer</h3>
