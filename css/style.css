@@ -61,6 +61,12 @@ footer.page-footer {
 .padrao-fundo{
     background-color: #176EAC!important;
 }
+.padrao2{
+  color: #f1f1f1;
+}
+.padrao2-fundo{
+  background-color:#f1f1f1;
+}
 .logo-nav{
   width: 70px;
   margin-left: 50px;

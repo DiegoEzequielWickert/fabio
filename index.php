@@ -14,39 +14,19 @@
 
 
 <body>
-  <!--nav class="white" role="navigation">
-    <div class="nav-fixed container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">home</i></a>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">A Crescer</a></li>
-        <li><a href="#serviços">Serviços</a></li>
-        <li><a href="#">Clientes</a></li>
-        <li><a href="#">Representantes</a></li>
-        <li><a href="#contato">Contatos</a></li>
-        <li><a href="#">Intranet</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">A Crescer</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">apps</i></a>
-    </div>
-  </nav-->
   <div class="navbar-fixed ">
     <nav>
-      <div class="nav-wrapper white">
+      <div class="nav-wrapper padrao-fundo">
         <a href="#" class="brand-logo padrao">
           <img src="img/logo.png" class="responsive-img logo-nav" alt="Logo">
         </a>
         <ul class="right hide-on-med-and-down ">
-          <li><a href="index.php" class="padrao">Inicio</a></li>
-          <li><a href="#" class="padrao">A Crescer</a></li>
-          <li><a href="serviços/" class="padrao">Serviços</a></li>
-          <li><a href="clientes/" class="padrao">Clientes</a></li>
-          <li><a href="representantes/" class="padrao">Representantes</a></li>
-          <li><a href="contato/" class="padrao">Contatos</a></li>
+          <li><a href="index.php" class=" white-text">Inicio</a></li>
+          <li><a href="#" class="white-text">A Crescer</a></li>
+          <li><a href="serviços/" class="white-text">Serviços</a></li>
+          <li><a href="clientes/" class="white-text">Clientes</a></li>
+          <li><a href="representantes/" class="white-text">Representantes</a></li>
+          <li><a href="contato/" class="white-text">Contatos</a></li>
         </ul>
       </div>
     </nav>
@@ -57,15 +37,18 @@
     <div class="section">
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m15 center logo-centro">
+        <div class="col s12 m12 center logo-centro">
             <div class="center-align logo">
             <img src="img/logo1.png" class="responsive-img " width="400px" alt=" Logomarca Crecer Contabilidade">
-              <h5 class="center-align padrao">Crescer Contabilidade </h5>
+            <br><br>
+            <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+            <h5 class="center-align padrao">Acrescentar Conquistas, Somar Conhecimento e Adicionar Satisfação</h5>
             </div>
             <div class="row">
               <div class="row"></div>
               <div class="col m12 l12">
-                <a class="btn-floating pulse"><i class="material-icons center padrao-fundo">keyboard_arrow_down</i></a>
+                <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+                <a class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
               </div>
             </div>
         </div>
@@ -73,6 +56,24 @@
         
       </div>
 
+    </div>
+  </div>
+  <!-- Nova camada-->
+  <div class="padrao2-fundo">
+    <div class="section">
+      <div class="row">
+        <div class="col l12 m12 s12 x12">
+          <h3 class="center-align">Sobre a Crescer</h3>
+          <div class="container">
+          Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
+           e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+           de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
+           só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente
+           inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de 
+           Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
