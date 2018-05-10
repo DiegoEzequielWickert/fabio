@@ -14,8 +14,13 @@
 
 
 <body>
-  <div class="navbar-fixed ">
+  <div class="navbar-fixed ">   
     <nav>
+      <div class="nav-telefone col l12 m12 s12">
+        CRM: 123.456-7  TEL.:(49) 9.8438-1635      
+        E-mail: crescer_contabilidade@gmail.com      
+        
+      </div>
       <div class="nav-wrapper padrao-fundo">
         <a href="#" class="brand-logo padrao">
           <img src="img/logo.png" class="responsive-img logo-nav" alt="Logo">
@@ -42,7 +47,7 @@
             <img src="img/logo1.png" class="responsive-img " width="400px" alt=" Logomarca Crecer Contabilidade">
             <br><br>
             <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-            <h5 class="center-align padrao">Acrescentar Conquistas, Somar Conhecimento e Adicionar Satisfação</h5>
+            <h5 class="center-align padrao">Acrescentar Conquistas, Somar Conhecimento e Adicionar Satisfação.</h5>
             </div>
             <div class="row">
               <div class="row"></div>
@@ -63,7 +68,7 @@
     <div class="section">
       <div class="row">
         <div class="col l12 m12 s12 x12">
-          <h3 class="center-align">Sobre a Crescer</h3>
+          <h3 class="center-align">Sobre a Crescer...</h3>
           <div class="container">
           Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
@@ -76,7 +81,7 @@
       </div>
     </div>
   </div>
-
+  <div class="row" ></div>
       
   <!-- FIM DOS CLIENTES-->
 
