@@ -17,8 +17,8 @@
   <div class="navbar-fixed ">   
     <nav>
       <div class="nav-telefone col l12 m12 s12">
-        CRM: 123.456-7  TEL.:(49) 9.8438-1635      
-        E-mail: crescer_contabilidade@gmail.com      
+         << CRM: 123.456-7  TEL.:(49) 9.8438-1635      
+        E-mail: crescer_contabilidade@gmail.com >>
         
       </div>
       <div class="nav-wrapper padrao-fundo">
@@ -27,7 +27,7 @@
         </a>
         <ul class="right hide-on-med-and-down ">
           <li><a href="index.php" class=" white-text">Inicio</a></li>
-          <li><a href="#" class="white-text">A Crescer</a></li>
+          <li><a href="#sobre" class="white-text">A Crescer</a></li>
           <li><a href="serviços/" class="white-text">Serviços</a></li>
           <li><a href="clientes/" class="white-text">Clientes</a></li>
           <li><a href="representantes/" class="white-text">Representantes</a></li>
@@ -69,13 +69,38 @@
       <div class="row">
         <div class="col l12 m12 s12 x12">
           <h3 class="center-align">Sobre a Crescer...</h3>
-          <div class="container">
+          <div class="container justificado">
+          <img src="img/logo1.png"  width="250px" align='right' alt="" style="display:float;">
           Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
            de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
            só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente
            inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de 
            Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+          </div>
+          <hr width="75%">
+          <div class="container">
+            <div class="col l4 justificado">
+              <h3>Missão</h3>
+              Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
+            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+            de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
+              
+            </div>
+            <div class="col l4 justificado">
+              <h3>Vissão</h3>
+              Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
+            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+            de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
+              
+            </div>
+            <div class="col l4 justificado">
+              <h3>Valores</h3>
+              Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
+            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+            de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
+              
+            </div>
           </div>
         </div>
       </div>
@@ -97,9 +122,8 @@
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="white-text">Mais Links</h5>
           <ul>
-
             <li><a class="white-text" href="#!">Link 1</a></li>
             <li><a class="white-text" href="#!">Link 2</a></li>
             <li><a class="white-text" href="#!"></a></li>
@@ -121,7 +145,8 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-        By <a class="brown-text text-lighten-3" href="#">WebFinatto.com</a>
+        By <a class="brown-text text-lighten-3" href="#">Diego Wickert </a> & 
+        <a class="brown-text text-lighten-3" href="#">Anthony Cassol</a>
       </div>
     </div>
   </footer>
