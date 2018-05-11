@@ -53,7 +53,7 @@
               <div class="row"></div>
               <div class="col m12 l12">
                 <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-                <a  href="#sobre" class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
+                <a  href="#sobre" class="btn-floating pulse padrao-fundo descer"><i class="material-icons center ">keyboard_arrow_down</i></a>
               </div>
             </div>
         </div>
@@ -69,8 +69,9 @@
       <div class="row">
         <div class="col l12 m12 s12 x12">
           <h3 class="center-align">Sobre a Crescer...</h3>
+          <p></p>
           <div class="container justificado">
-          <img src="img/logo1.png"  width="250px" align='right' alt="" style="display:float;">
+          <img src="img/logo1.png" class="responsive-img r_image" width="210px" align='right' alt="" style="display:float;">
           Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
            de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
@@ -78,35 +79,38 @@
            inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de 
            Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
           </div>
-          <hr width="75%">
+          <p></p>
           <div class="container">
-            <div class="col l4 justificado">
+            <div class="col l8 justificado caixa">
               <h3>Missão</h3>
               Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
-            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
-            de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
-              
+              e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+              de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
+              <br><br>
             </div>
-            <div class="col l4 justificado">
+            <p></p>
+            <div class="col l8 justificado caixa">
               <h3>Vissão</h3>
               Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
-            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
-            de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
-              
+              e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+              de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
+            <br><br>
             </div>
-            <div class="col l4 justificado">
+            <p></p>
+            <div class="col l8 justificado caixa">
               <h3>Valores</h3>
               Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
-            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
-            de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
-              
+              e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+              de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
+            <br><br>
             </div>
+            
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row" ></div>
+  <div class="row"></div>
       
   <!-- FIM DOS CLIENTES-->
 

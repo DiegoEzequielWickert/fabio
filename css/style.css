@@ -82,8 +82,21 @@ footer.page-footer {
   width: 100% !important;
   font-size: 10pt;
   font-family: 'Courier New', Courier, monospace;
-
 }
+
 .justificado{
   text-align: justify;
+}
+.caixa{
+    border: 2px solid gray;
+    padding: 5px;
+    border-top-right-radius: 25px;
+    border-left: 10px;
+
+}
+.descer:hover{
+    transition:all 0.3s ease;
+}
+.r_image{
+  margin-left: 50px; 
 }
