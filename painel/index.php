@@ -5,70 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Painel</title>
-    <link rel="stylesheet" href="../css/materialize.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     
 </head> 
-<bodY style="background-color:#f1f1f1">
+<body style="background-color:#f1f1f1">
     
-    <!--  INICIO DO  NAV-->
-    
+<nav>
+    <div class="nav-wrapper">
+      <ul class="side-nav grey darken-2" id="mobile-demo">
+        
+        
+        
+        <li class="blue">
+        <li class="white">
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="collapsible-header waves-effect waves-blue"><i class="material-icons">folder_special</i>Layouts <i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">fullscreen</i>Full Screen<span class="new badge right yellow grey lighten-1" data-badge-caption="updated"></span></a></li>
+                  <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">swap_horiz</i>Horizontal Menu<span class="new badge right yellow darken-3"></span></a></li>
+                  <li><div class="divider"></div></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="white">
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="collapsible-header waves-effect waves-blue"><i class="material-icons">folder_open</i>A submenu <i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">fullscreen</i>Full Screen</a></li>
+                  <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">swap_horiz</i>Horizontal Menu</a></li>
+                  <li><div class="divider"></div></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">mail</i></a></li>
+        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">call</i> </a></li>
+        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">android</i> </a></li>
+        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">dialpad</i> </a></li>
+        <li class="white"><div class="divider"></div></li>
+        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">language</i><span class="new badge right yellow darken-3"></span></a></li>
+        
+      </ul>
+      
+    </div>
+  </nav>
 
-<div class="col s12 m4 l3 blue"> <!-- Note that "m4 l3" was added -->
-  <!-- Grey navigation panel
 
-        This content will be:
-    3-columns-wide on large screens,
-    4-columns-wide on medium screens,
-    12-columns-wide on small screens  -->
 
-</div>
-
-<div class="col s12 m8 l9 black"> <!-- Note that "m8 l9" was added -->
-  <!-- Teal page content
-
-        This content will be:
-    9-columns-wide on large screens,
-    8-columns-wide on medium screens,
-    12-columns-wide on small screens  -->
-
-</div>
-
-</div>
-    <!-- FIM FOOTER -->
-
-     <!--  Scripts-->
-    
-    
+<!--JavaScript at end of body for optimized loading-->
     <script src="../jquery/jquery-2.1.1.min.js"></script>
     <script src="../js/materialize.js"></script>
     <script src="../js/init.js"></script>
-    <script>
-        var elem = document.querySelector('.sidenav');
-        var instance = M.Sidenav.init(elem, options);
-
-        // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
-        // var collapsibleElem = document.querySelector('.collapsible');
-        // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
-
-        // Or with jQuery
-
-        $(document).ready(function(){
-            $('.sidenav').sidenav();
-        });
-            
-  </script>
-  <script>
-    /* initialize floating buttons */
-    $(document).ready(function(){
-        $('.fixed-action-btn').floatingActionButton();
-    });
-    var elem = document.querySelector('.fixed-action-btn');
-    var instance = M.FloatingActionButton.init(elem, {
-        direction: 'left'
-    });
-  </script>
-
-
+    
 </body>
 </html> 
