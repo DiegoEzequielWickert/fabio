@@ -16,13 +16,13 @@
     $iniciosobre =$path_nivel.$inicio; 
     $sobre ="index.php#sobre";
     $sobre =$path_nivel.$sobre;
-    $servicos ="servicos.php";
+    $servicos ="servicos/";
     $servicos =$path_nivel.$servicos;
-    $clientes ="clientes.php";
+    $clientes ="clientes/";
     $clientes =$path_nivel.$clientes;
-    $representantes ="representantes.php";
+    $representantes ="representantes/";
     $representantes =$path_nivel.$representantes;
-    $contato ="contato.php";
+    $contato ="contato/";
     $contato =$path_nivel.$contato;
     $imagem  = "img/logo.png";
     $imagem =  $path_nivel.$imagem;
