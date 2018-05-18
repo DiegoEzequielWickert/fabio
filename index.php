@@ -28,7 +28,7 @@
       <div class="row">
         <div class="col s12 m12 center logo-centro">
             <div class="center-align logo">
-            <img src="img/logo1.png" class="responsive-img " width="400px" alt=" Logomarca Crecer Contabilidade">
+            <img src="img/logomarca_CRM.png" class="responsive-img " width="400px" alt=" Logomarca Crecer Contabilidade">
             <br><br>
             <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
             <h5 class="center-align padrao">Acrescentar Conquistas, Somar Conhecimento e Adicionar Satisfação.</h5>
@@ -55,7 +55,7 @@
           <h3 class="center-align">Sobre a Crescer...</h3>
           <p></p>
           <div class="container justificado">
-          <img src="img/logo1.png" class="responsive-img r_image" width="210px" align='right' alt="" style="display:float;">
+          <img src="img/logo1.png" class="responsive-img r_image"  align='right' alt="" style="display:float;">
           Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
            de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
@@ -65,24 +65,24 @@
           </div>
           <p></p>
           <div class="container">
-            <div class="col l4 justificado caixa">
-              <h3>Missão</h3>
+            <div class="col l10 justificado">
+              <h5>Missão</h5>
               Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
               e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
               de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
               <br><br>
             </div>
             <p></p>
-            <div class="col l4 justificado caixa">
-              <h3>Vissão</h3>
+            <div class="col l10 justificado ">
+              <h5>Vissão</h5>
               Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
               e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
               de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
             <br><br>
             </div>
             <p></p>
-            <div class="col l4 justificado caixa">
-              <h3>Valores</h3>
+            <div class="col l10 justificado">
+              <h5>Valores</h5>
               Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
               e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
               de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
@@ -94,12 +94,25 @@
       </div>
     </div>
   </div>
-  <div class="row"></div>
+  <div class="container">
+    <div class="row">
+      <br><br>
+      <h5>Precisando de Ajuda?</h5>
+        <t>Solicite um contato, além de ser nosso trabalho, amamos o que fazemos!
+        <br><br>
+        <a class="waves-effect waves-light btn padrao-fundo" href="contato/"> 
+          <i class="material-icons right">send</i>
+           Solicitar Conatato
+        </a>
+        <br><br> 
+    </div>
+  </div>
       
   <!-- FIM DOS CLIENTES-->
 
   <?php 
     include('footer.php');
   ?>
+  
   </body>
 </html>

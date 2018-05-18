@@ -42,7 +42,7 @@
 
   <!--  Scripts-->
   
-  <script src="../jquery/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="<?php echo $path_nivel; ?>../jquery/jquery-2.1.1.min.js"></script>
+  <script src="<?php echo $path_nivel; ?>js/materialize.js"></script>
+  <script src="<?php echo $path_nivel; ?>js/init.js"></script>
  

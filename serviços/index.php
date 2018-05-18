@@ -1,4 +1,7 @@
-
+<?php 
+   // aqui define o Nivel de página que o Usuário está 
+   define ('nivel', 2);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,121 +17,37 @@
 
 
 <body>
-  <!--nav class="white" role="navigation">
-    <div class="nav-fixed container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">home</i></a>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">A Crescer</a></li>
-        <li><a href="#serviços">Serviços</a></li>
-        <li><a href="#">Clientes</a></li>
-        <li><a href="#">Representantes</a></li>
-        <li><a href="#contato">Contatos</a></li>
-        <li><a href="#">Intranet</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">A Crescer</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">apps</i></a>
-    </div>
-  </nav-->
-  <div class="navbar-fixed ">
-    <nav>
-      <div class="nav-wrapper white">
-        <a href="#!" class="brand-logo">Logo</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="index.php">Inicio</a></li>
-          <li><a href="#">A Crescer</a></li>
-          <li><a href="serviços/">Serviços</a></li>
-          <li><a href="clientes/">Clientes</a></li>
-          <li><a href="representantes/">Representantes</a></li>
-          <li><a href="contato/">Contatos</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
+  <?php 
+    include('../topo.php');
+  ?>
 
   <div class="container">
-    <div class="section">
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m10 center">
-            
-            
-            <img src="../img/logo1.png" class="responsive-img" alt=" Logomarca Crecer Contabilidade">
-            
-        </div>
-
+    <div class="row padrao2-fundo">
         
+        <div class="col l12 l6">            
+         <h3>Servios prestados pela  Crescer Contabilidade</h3>        
+            <div class="col l4 m6 s6 servico white">
+            <h4>Serviços 01</h4>
+              <ul>
+                <li><i class="material-icons tiny">play_arrow</i> Atividade 01</li>
+                <li><i class="material-icons tiny">play_arrow</i>  Atividade 01</li>
+                <li><i class="material-icons tiny">play_arrow</i>  Atividade 01</li>
+                <li><i class="material-icons tiny">play_arrow</i> Atividade 01</li>
+                <li><i class="material-icons tiny">play_arrow</i>  Atividade 01</li>
+                <li> Atividade 01</li>
+                <li> Atividade 01</li>
+              </ul>        
+            </div>   
+        </div>      
+     
       </div>
-
-    </div>
   </div>
-
       
   <!-- FIM DOS CLIENTES-->
-
-  <footer class="page-footer blue" id='contato'>
-    <div class="container ">
-      <div class="row">
-        <div class="col l6 s12 ">
-          <h5 class="white-text">Contatos</h5>
-          <p class="grey-text text-lighten-4"> 
-            Teste teste teste teste
-          </p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!"></a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Link Úteis</h5>
-          <ul>
-          <li><a class="white-text" href="#!">Home 1</a></li>
-            <li><a class="white-text uteis" href="#!">A Crescer</a></li>
-            <li><a class="white-text uteis" href="#!">Serviços</a></li>
-            <li><a class="white-text uteis" href="#!">Clientes</a></li>
-            <li><a class="white-text uteis" href="#!">Representantes</a></li>
-            <li><a class="white-text uteis" href="#!">Contatos</a></li>
-            <li><a class="white-text uteis" href="login/">Login</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        By <a class="brown-text text-lighten-3" href="#">Crescer Contabilidade</a>
-      </div>
-    </div>
-  </footer>
-
+<?php include('../footer.php'); ?>
 
   <!--  Scripts-->
   
-  <script src="../../jquery/jquery-2.1.1.min.js"></script>
-  <script src="../js/materialize.js"></script>
-  <script src="../js/init.js"></script>
-  <script>
-      var elem = document.querySelector('.carousel');
-      var instance = M.Carousel.init(elem, options);
-
-      // Or with jQuery
-
-      $(document).ready(function(){
-        $('.carousel').carousel();
-      });
-    </script>
-    
 
   </body>
 </html>

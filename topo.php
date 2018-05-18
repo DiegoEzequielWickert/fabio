@@ -24,6 +24,8 @@
     $representantes =$path_nivel.$representantes;
     $contato ="contato.php";
     $contato =$path_nivel.$contato;
+    $imagem  = "img/logo.png";
+    $imagem =  $path_nivel.$imagem;
 ?>
 <div class="navbar-fixed ">   
     <nav>
@@ -36,7 +38,7 @@
       </div>
       <div class="nav-wrapper padrao-fundo">
         <a href="#" class="brand-logo padrao">
-          <img src="img/logo.png" class="responsive-img logo-nav" alt="Logo">
+          <img src="<?php echo $imagem; ?>" class="responsive-img logo-nav" alt="Logo">
         </a>
         <ul class="right hide-on-med-and-down ">
           <li><a href="<?php echo $inicio; ?>" class=" white-text">Inicio</a></li>
