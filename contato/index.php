@@ -63,11 +63,14 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                    <i class="material-icons prefix">edit</i>
-                    <textarea name="mensagem" id="textarea2"  class="materialize-textarea" data-length="250" ></textarea>
-                    <label for="textarea2">Deixe sua Mensagem (*opcional)</label>
+                        <i class="material-icons prefix">edit</i>
+                        <textarea name="mensagem" id="textarea2"  class="materialize-textarea" data-length="250" ></textarea>
+                        <label for="textarea2">Deixe sua Mensagem (*opcional)</label>
                     </div>
                 </div>
+                
+                
+            
                 <div class="row">
                     <div class="input-field col l6">
                         <i class="material-icons prefix">fingerprint</i>
@@ -78,12 +81,15 @@
                 <div class="row">
                     <button class="btn waves-effect waves-light btn-large escuro-fundo" type="submit">Enviar
                         <i class="material-icons right">record_voice_over</i>
-                    </button>                    
+                    </button>   
+                    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5638.944364173496!2d-53.00848571479194!3d-27.083484075619488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1527050364105"  frameborder="0" style="border:0" allowfullscreen></iframe>                 
                 </div> 
                             
             </form>
-        </div>
-    </div>
+           
+            
+    </div><!--fecha o container-->
+                    </div>
 
     <?php 
         include('../footer.php');

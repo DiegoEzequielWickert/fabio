@@ -123,7 +123,12 @@ h4{
   margin-top:75px;
 }
 formulario{
-  font-size: 18pt;
-  
-  color: red ;
+  font-size: 18pt;  
+  color: red !important;
+}
+.mapa{
+  width: 500px;
+  height: 380px;
+  display: inline-block;
+  margin-left: 700px;
 }
