@@ -1,4 +1,18 @@
-  <footer class="page-footer padrao-fundo" id='contato'>
+ <!-- Direciona para o  Formulário de  Contato --> 
+  <div class="container">
+    <div class="row">
+      <br><br>
+      <h5>Precisando de Ajuda?</h5>
+        <p>Solicite um contato, além de ser nosso trabalho, amamos o que fazemos!
+        <br><br>
+        <a class="waves-effect waves-light btn padrao-fundo" href="<?php echo $contato;?>"> 
+          <i class="material-icons right">send</i>
+            Solicitar Contato
+        </a>
+        <br><br> 
+    </div>
+  </div>
+  <footer class="page-footer escuro-fundo" id='contato'>
     <div class="container ">
       <div class="row">
         <div class="col l6 s12 ">
@@ -12,8 +26,7 @@
         <div class="col l3 s12">
           <h5 class="white-text">Mais Links</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
+            
             <li><a class="white-text" href="#!"></a></li>
           </ul>
         </div>
@@ -21,11 +34,11 @@
           <h5 class="white-text">Link Úteis</h5>
           <ul>
           
-            <li><a class="white-text uteis" href="#!">A Crescer</a></li>
-            <li><a class="white-text uteis" href="#!">Serviços</a></li>
-            <li><a class="white-text uteis" href="#!">Clientes</a></li>
-            <li><a class="white-text uteis" href="#!">Representantes</a></li>
-            <li><a class="white-text uteis" href="#!">Contatos</a></li>
+            <li><a class="white-text uteis" href="#">A Crescer</a></li>
+            <li><a class="white-text uteis" href="#">Serviços</a></li>
+            <li><a class="white-text uteis" href="#">Clientes</a></li>
+            <li><a class="white-text uteis" href="#">Representantes</a></li>
+            <li><a class="white-text uteis" href="#">Contatos</a></li>
            
           </ul>
         </div>
@@ -42,7 +55,7 @@
 
   <!--  Scripts-->
   
-  <script src="<?php echo $path_nivel; ?>../jquery/jquery-2.1.1.min.js"></script>
+  <script src="<?php echo $path_nivel; ?>jquery/jquery-2.1.1.min.js"></script>
   <script src="<?php echo $path_nivel; ?>js/materialize.js"></script>
   <script src="<?php echo $path_nivel; ?>js/init.js"></script>
  

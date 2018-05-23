@@ -1,6 +1,7 @@
 <?php 
    // aqui define o Nivel de página que o Usuário está 
    define ('nivel', 2);
+   date_default_timezone_set('America/Sao_Paulo');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

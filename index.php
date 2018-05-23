@@ -1,6 +1,8 @@
 <?php 
    // aqui define o Nivel de página que o Usuário está 
    define ('nivel', 1);
+   // DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
+   date_default_timezone_set('America/Sao_Paulo');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -48,8 +50,8 @@
     </div>
   </div>
   <!-- Nova camada-->
-  <div class="padrao2-fundo">
-    <div id="sobre" class="section">
+  <div id="sobre" class="padrao2-fundo">
+    <div  class="section" >
       <div class="row">
         <div class="col l12 m12 s12 x12">
           <h3 class="center-align">Sobre a Crescer...</h3>
@@ -94,24 +96,12 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <br><br>
-      <h5>Precisando de Ajuda?</h5>
-        <t>Solicite um contato, além de ser nosso trabalho, amamos o que fazemos!
-        <br><br>
-        <a class="waves-effect waves-light btn padrao-fundo" href="contato/"> 
-          <i class="material-icons right">send</i>
-           Solicitar Conatato
-        </a>
-        <br><br> 
-    </div>
-  </div>
+
       
   <!-- FIM DOS CLIENTES-->
 
   <?php 
-    include('footer.php');
+    require_once('footer.php');
   ?>
   
   </body>

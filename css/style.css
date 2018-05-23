@@ -68,7 +68,13 @@ footer.page-footer {
   color: #f1f1f1;
 }
 .padrao2-fundo{
-  background-color:#f1f1f1;
+  background-color:#f5f5f5;
+}
+.escuro{
+  color:#373737;
+}
+.escuro-fundo{
+  background-color:#373737;
 }
 .logo-nav{
   width: 75px;
@@ -107,6 +113,17 @@ nav li{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .servico{
-  background-color: white !important;
+  background-color:#f5f5f5 !important;
   margin-bottom: 50px;
+}
+h3{
+  margin-top: 100px;
+}
+h4{
+  margin-top:75px;
+}
+formulario{
+  font-size: 18pt;
+  
+  color: red ;
 }
