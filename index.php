@@ -43,7 +43,7 @@
               </div>
             </div>
         </div>
-
+        <img src="login_img.png">
         
       </div>
 

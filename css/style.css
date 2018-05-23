@@ -127,8 +127,8 @@ formulario{
   color: red !important;
 }
 .mapa{
-  width: 500px;
+  width: 100%;
   height: 380px;
   display: inline-block;
-  margin-left: 700px;
+  
 }
