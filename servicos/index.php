@@ -36,7 +36,7 @@
       <br>
 
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="card-panel">
             <i class="material-icons">room</i>
             <h5 class="titulo"> Serviço 01</h5>
@@ -44,28 +44,28 @@
           </div>
   
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="card-panel">
             <i class="material-icons">room</i>
             <h5 class="titulo"> Serviço 01</h5>
              teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
           </div>
   
-        </div><div class="col s12 m4">
+        </div><div class="col s12 m6">
           <div class="card-panel">
             <i class="material-icons">room</i>
             <h5 class="titulo"> Serviço 01</h5>
              teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
           </div>
   
-        </div><div class="col s12 m4">
+        </div><div class="col s12 m6">
           <div class="card-panel">
             <i class="material-icons">room</i>
             <h5 class="titulo"> Serviço 01</h5>
              teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
           </div>
   
-        </div><div class="col s12 m4">
+        </div><div class="col s12 m6">
           <div class="card-panel">
             <i class="material-icons">room</i>
             <h5 class="titulo"> Serviço 01</h5>
