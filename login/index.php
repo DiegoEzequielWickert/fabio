@@ -32,21 +32,21 @@
                         </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input id="nome" type="text" class="validate">
+                                <input id="nome" type="text" required="required" class="validate">
                                 <label for="nome">Usuário:</label>
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">fingerprint</i>
-                                <input id="senha" type="password" class="validate">
+                                <input id="senha" required="required" type="password" class="validate">
                                 <label for="senha">Senha:</label>
                             </div>
                             <div class="row center-align">
                                 <div class="g-recaptcha" data-sitekey="6LdFuU4UAAAAAG58qZKTaay8aCOTe1pmECCsQEWu"></div>
                                 <label>
-                            </div>
+                            </div> 
+                            <br><br><br>
                             <div class="input-field col s12">
-                                
-                                    <input type="checkbox"  name="lembre"/>
+                                <input type="checkbox" name="lembre"/>
                                 <span>Lembrar Senha</span>
                             </div>
                         </div>
