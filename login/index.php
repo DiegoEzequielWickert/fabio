@@ -19,7 +19,7 @@
 <body>
 
     <div class="row">
-        <div class="col s12 m4 offset-m4 center">
+        <div class="col s12 m12 l4 push-l4 center">
             <div class="card login">
                 <div class="escuro-fundo center card " >
                     <img src="../img/logo.png" class=" responsive-img logo-login"alt=" Logomarca Branca Crescer Contabilidade">

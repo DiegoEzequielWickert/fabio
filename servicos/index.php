@@ -36,38 +36,39 @@
       <br>
 
       <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
           <div class="card-panel">
-            <i class="material-icons">room</i>
+            <i class="material-icons large">room</i>
             <h5 class="titulo"> Serviço 01</h5>
              teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
           </div>
   
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
           <div class="card-panel">
-            <i class="material-icons">room</i>
+            <i class="material-icons large">room</i>
             <h5 class="titulo"> Serviço 01</h5>
              teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
           </div>
   
-        </div><div class="col s12 m6">
+        </div>
+        <div class="col s12 m12 l6">
           <div class="card-panel">
-            <i class="material-icons">room</i>
+            <i class="material-icons large">room</i>
             <h5 class="titulo"> Serviço 01</h5>
              teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
           </div>
   
-        </div><div class="col s12 m6">
+        </div><div class="col s12 m12 l6">
           <div class="card-panel">
-            <i class="material-icons">room</i>
+            <i class="material-icons large">room</i>
             <h5 class="titulo"> Serviço 01</h5>
              teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
           </div>
   
-        </div><div class="col s12 m6">
+        </div><div class="col s12 m12 l6">
           <div class="card-panel">
-            <i class="material-icons">room</i>
+            <i class="material-icons large">room</i>
             <h5 class="titulo"> Serviço 01</h5>
              teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
           </div>

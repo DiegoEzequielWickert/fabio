@@ -11,54 +11,74 @@
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     
 </head> 
-<body style="background-color:#f1f1f1">
-    
-<nav>
-    <div class="nav-wrapper">
-      <ul class="side-nav grey darken-2" id="mobile-demo">
-        
-        
-        
-        <li class="blue">
-        <li class="white">
-          <ul class="collapsible collapsible-accordion">
-            <li>
-              <a class="collapsible-header waves-effect waves-blue"><i class="material-icons">folder_special</i>Layouts <i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">fullscreen</i>Full Screen<span class="new badge right yellow grey lighten-1" data-badge-caption="updated"></span></a></li>
-                  <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">swap_horiz</i>Horizontal Menu<span class="new badge right yellow darken-3"></span></a></li>
-                  <li><div class="divider"></div></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="white">
-          <ul class="collapsible collapsible-accordion">
-            <li>
-              <a class="collapsible-header waves-effect waves-blue"><i class="material-icons">folder_open</i>A submenu <i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">fullscreen</i>Full Screen</a></li>
-                  <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">swap_horiz</i>Horizontal Menu</a></li>
-                  <li><div class="divider"></div></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">mail</i></a></li>
-        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">call</i> </a></li>
-        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">android</i> </a></li>
-        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">dialpad</i> </a></li>
-        <li class="white"><div class="divider"></div></li>
-        <li class="white"><a href="#" class="waves-effect waves-blue"><i class="material-icons">language</i><span class="new badge right yellow darken-3"></span></a></li>
-        
+<body>
+  <nav>
+    <div class="nav-wrapper padrao-fundo fixed">
+      <a href="#" class="brand-logo center white-text">Self V_1.0 - Crescer</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down ">
+        <li><a href="servico.php" class="white-text">Serviços</a></li>
+        <li><a href="clientes.php" class="white-text">Clientes</a></li>
+        <li><a href="representante.php" class="white-text">Representantes</a></li>
       </ul>
-      
     </div>
   </nav>
+  <img src="../img/logo1.png" align='left' alt="Logomarca Crescer" width="100px" class="responive-img">
+
+  <div class="container col l10 center">
+    <h5>Painel de  Gestão de Conteudo - Crescer Contabilidade</h5>
+    
+    <p> Sistema de  gestão Self - Crescer Contabilidade</p>
+  
+  
+    <div class="row">
+        <div class="col s12 m12 l4">
+          <div class="card-panel z-depth-4">
+            <i class="material-icons medium">work</i>
+            <a href="servico.php">
+              <h5 class="padrao">  Serviços</h5>
+                Usado para  determinar os  serviços que  serão adicionados a página  de serviços. Sendo possivel adicionar, editar e remover o cadastro.
+            </a>       
+          </div>
+          <a class="waves-effect waves-light btn-large red"><i class="material-icons right">edit</i>Editar</a>              
+        </div>
+        <div class="divider"></div>
+        <div class="col s12 m12 l4">
+          <div class="card-panel z-depth-4">
+            <i class="material-icons medium">people</i>
+            <a href="clientes.php">
+              <h5 class="padrao">Clientes</h5>
+                Usado para cadastro de clientes, alteração ou remoção. Bem como a configuração de  disposição dos clientes na tela.
+            </a>       
+          </div> 
+          <a class="waves-effect waves-light btn-large blue"><i class="material-icons right">edit</i>Editar</a>             
+        </div>
+        <div class="divider"></div>
+        <div class="col s12 m12 l4">
+          <div class="card-panel z-depth-4">
+            <i class="material-icons medium">record_voice_over</i>
+            <a href="clientes.php">
+              <h5 class="padrao">Representantes</h5>
+                Aqui é  realizado o cadastro de  cliente de acordo com a cidade.Usa a  cidade como  agrupamento.
+            </a>  
+          </div>
+          <a class="waves-effect waves-light btn-large green"><i class="material-icons right">edit</i>Editar</a>  
+        </div>
+      </div>
+      <div class="row">  
+        <div class="divider"></div>
+        <div class="col s12 m12 l4">
+          <div class="card-panel z-depth-4">
+            <i class="material-icons medium">mail</i>
+            <a href="clientes.php">
+              <h5 class="padrao">Contatos Recebidos</h5>
+                Aqui é possivel  verificar os contatos recebidos e  fazer gestão dos mesmos.Ex.: Status de  retorno, etc.
+            </a>  
+          </div>
+          <a class="waves-effect waves-light btn-large white-text black"><i class="material-icons right">edit</i>Editar</a>  
+        </div>
+
+  </div> <!-- Fim do row-->
+  </div><!-- Fim do Container-->
 
 
 
