@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 
@@ -73,13 +74,12 @@
             
                 <div class="row">
                     <div class="input-field col l6">
-                        <i class="material-icons prefix">fingerprint</i>
-                        <input placeholder="GOOGLE CAPtcha" name="google" type="text" class="validate formulario">
-                        <label for="cidade">GOOGLE CAPTRCHA</label>
+                       
+                        <div class="g-recaptcha" data-sitekey="6LeT-VsUAAAAAGmS7skQ9AD-9xxZ8XkoQEV_wMgl"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <button class="btn waves-effect waves-light btn-large escuro-fundo" type="submit">Enviar
+                    <button class="btn waves-effect waves-blue btn-large escuro-fundo" type="submit">Enviar
                         <i class="material-icons right">record_voice_over</i>
                     </button>   
                                      
@@ -104,6 +104,7 @@
             $('textarea#textarea2, input#telefone1').characterCounter();
         });
      </script>
+            
 
 </boby>
 </html>

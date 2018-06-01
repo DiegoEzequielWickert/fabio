@@ -1,8 +1,10 @@
-<?php 
-   // aqui define o Nivel de página que o Usuário está 
-   define ('nivel', 2);
-   date_default_timezone_set('America/Sao_Paulo');
+<?php
+    define('nivel',2); 
+    // DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
+    date_default_timezone_set('America/Sao_Paulo'); 
+    require('../conecta_db.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,56 +27,32 @@
 
 
 <body>
+  
   <?php 
-    include('../topo.php');
+    require('../topo.php');
   ?>
-
   <br><br><br><br><br>
     <div class="container center">
-      <h5>Alguns de nossos serviços,o que temos de melhor...</h5>
+      <h4>Como a Crescer Pode Te Ajudar Hoje? </h4>
       
       <br>
-
       <div class="row">
-        <div class="col s12 m12 l6">
-          <div class="card-panel">
-            <i class="material-icons large">room</i>
-            <h5 class="titulo"> Serviço 01</h5>
-             teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
-          </div>
-  
-        </div>
-        <div class="col s12 m12 l6">
-          <div class="card-panel">
-            <i class="material-icons large">room</i>
-            <h5 class="titulo"> Serviço 01</h5>
-             teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
-          </div>
-  
-        </div>
-        <div class="col s12 m12 l6">
-          <div class="card-panel">
-            <i class="material-icons large">room</i>
-            <h5 class="titulo"> Serviço 01</h5>
-             teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
-          </div>
-  
-        </div><div class="col s12 m12 l6">
-          <div class="card-panel">
-            <i class="material-icons large">room</i>
-            <h5 class="titulo"> Serviço 01</h5>
-             teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
-          </div>
-  
-        </div><div class="col s12 m12 l6">
-          <div class="card-panel">
-            <i class="material-icons large">room</i>
-            <h5 class="titulo"> Serviço 01</h5>
-             teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
-          </div>
-  
-        </div>
-          
+             <?php
+                $result = "select * from t_servicos where ser_status = 'A'";  
+                $resultado = mysqli_query($mysqli, $result); 
+                while($exibe = mysqli_fetch_assoc($resultado)){
+                  echo '<div class="col s12 m12 l6">
+                          <div class="card-panel">
+                            <i class="material-icons large">domain</i>
+                            <h5 class="titulo">'.$exibe['ser_descricao'].'</h5>
+                            teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
+                          </div>    
+                        </div>';
+                }
+              ?> 
+             
+            
+                    
       </div>
    </div>
    <div class="fixed-action-btn">
@@ -87,10 +65,10 @@
   </ul>
 </div>
   
-      
-  <!-- FIM DOS CLIENTES-->
-<?php include('../footer.php'); ?>
-
+ <?php 
+    require('../footer.php');
+  ?>     
+ 
   <!--  Scripts-->
   <script>
     $(document).ready(function(){

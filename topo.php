@@ -30,11 +30,7 @@
 <div class="navbar-fixed">   
     <nav>
       <div class="nav-telefone col l12 m12 s12">
-         <span>CRM: 123.456-7 </span>
-         <span>TEL.:(49) 9.8438-1635</span> 
-         <span>E-mail: crescer_contabilidade@gmail.com </span>       
-        
-        
+           
       </div>
       <div class="nav-wrapper padrao-fundo">
         <a href="<?php echo $inicio;?>" class="brand-logo padrao">
