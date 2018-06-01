@@ -20,7 +20,7 @@
     .titulo{
       text-align:left;
     }
-    
+
   </style>
 
 </head>
@@ -40,14 +40,28 @@
              <?php
                 $result = "select * from t_servicos where ser_status = 'A'";  
                 $resultado = mysqli_query($mysqli, $result); 
+
                 while($exibe = mysqli_fetch_assoc($resultado)){
+                  
+                  
+
                   echo '<div class="col s12 m12 l6">
                           <div class="card-panel">
                             <i class="material-icons large">domain</i>
+                            <br><span class="badge red white-text left">Novo!!!! </span>
                             <h5 class="titulo">'.$exibe['ser_descricao'].'</h5>
-                            teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste           
-                          </div>    
-                        </div>';
+                              <ol align="left">
+                            ';
+                  // consulta para  pegar as  ativides ATIVAS  
+                  $sql2 = "select * from t_atividade where ser_codigo =".$exibe['ser_codigo']." and ati_status = 'A' ";
+                  
+                  $resultado2 = mysqli_query($mysqli, $sql2);   
+                  while($atividade = mysqli_fetch_assoc($resultado2)){
+                      echo "<li>".$atividade['ati_descricao']." </li>";
+                  }                 
+                  echo ' </ol>
+                        </div>    
+                      </div>';
                 }
               ?> 
              
