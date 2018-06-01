@@ -33,7 +33,7 @@
   ?>
   <br><br><br><br><br>
     <div class="container center">
-      <h4>Como a Crescer Pode Te Ajudar Hoje? </h4>
+      <h4>Como a <code>Crescer</code> Pode Te Ajudar Hoje? </h4>
       
       <br>
       <div class="row">
@@ -49,7 +49,8 @@
                           <div class="card-panel">
                             <i class="material-icons large">domain</i>
                             <br><span class="badge red white-text left">Novo!!!! </span>
-                            <h5 class="titulo">'.$exibe['ser_descricao'].'</h5>
+
+                            <h5>'.$exibe['ser_descricao'].'</h5>
                               <ol align="left">
                             ';
                   // consulta para  pegar as  ativides ATIVAS  
@@ -57,7 +58,7 @@
                   
                   $resultado2 = mysqli_query($mysqli, $sql2);   
                   while($atividade = mysqli_fetch_assoc($resultado2)){
-                      echo "<li>".$atividade['ati_descricao']." </li>";
+                      echo "<li align='left'>".$atividade['ati_descricao']." </li>";
                   }                 
                   echo ' </ol>
                         </div>    
