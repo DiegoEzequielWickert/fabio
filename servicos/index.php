@@ -58,7 +58,11 @@
                   
                   $resultado2 = mysqli_query($mysqli, $sql2);   
                   while($atividade = mysqli_fetch_assoc($resultado2)){
-                      echo "<li align='left'>".$atividade['ati_descricao']." </li>";
+                      if (!$atividade) {
+                        echo "<li align='left'> Nenhuma atividade Cadastrada </li>";
+                      }else{
+                        echo "<li align='left'>".$atividade['ati_descricao']." </li>";
+                      }
                   }                 
                   echo ' </ol>
                         </div>    
