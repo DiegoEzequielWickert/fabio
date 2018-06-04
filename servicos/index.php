@@ -46,7 +46,7 @@
                   
 
                   echo '<div class="col s12 m12 l6">
-                          <div class="card-panel">
+                          <div class="card-panel z-depth-3">
                             <i class="material-icons large">domain</i>
                             <br><span class="badge red white-text left">Novo!!!! </span>
 
