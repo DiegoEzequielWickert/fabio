@@ -78,7 +78,7 @@ footer.page-footer {
   color:#373737;
 }
 .escuro-fundo{
-  background-color:#373737;
+  background-color:#373737 !important;
 }
 .logo-nav{
   width: 75px;

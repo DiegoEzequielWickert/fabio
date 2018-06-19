@@ -28,7 +28,21 @@
     <h5>Painel de  Gestão de Conteudo - Crescer Contabilidade</h5>
     
     <p> Sistema de  gestão Self - Crescer Contabilidade</p>
+
+    <div class="row"> 
+        <div class="nav-bar col l3">
+        <ul class="collection with-header escuro-fundo">
+        <li class="collection-header escuro-fundo white-text"><h4>Painel</h4></li>
+        <li class="collection-item escuro-fundo white-text"><i class="material-icons white">user </i><div>Alvin<a href="#!" class="secondary-content white-text"><i class="material-icons">send</i></a></div></li>
+        <li class="collection-item escuro-fundo white-text"><div>Alvin<a href="#!" class="secondary-content white-text"><i class="material-icons">send</i></a></div></li>
+        <li class="collection-item escuro-fundo white-text"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons white-text">send</i></a></div></li>
+        <li class="collection-item escuro-fundo white-text"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons white-text">send</i></a></div></li>
+      </ul>
+
+    </div>
   
+    </div>
+    
   
     <div class="row">
         <div class="col s12 m12 l4">
