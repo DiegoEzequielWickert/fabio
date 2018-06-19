@@ -1,4 +1,3 @@
-
 <?php
 	$mysqli = mysqli_connect('localhost', 'root', 'AA00anthony@', 'crescer');
 	
