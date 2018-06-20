@@ -15,31 +15,67 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style type="text/css">
+    
+    
+  </style>
+
 </head>
 
 
 <body>
   <?php
-   
     include('topo.php');
   ?>
+  
+  <div class = "total">
+    <div class = "container">
+        <div class = "row"> 
+          <div class="col s12 m12 center logo-centro">
+            <div class="center-align logo">
+              <img src="img/logo1.png" class="responsive-img " width="380px" alt=" Logomarca Crecer Contabilidade">
+              <br><br>
+              
+              <h5 class="center-align padrao">Acrescentar Conquistas, Somar Conhecimento e Adicionar Satisfação.</h5>
+              <hr></hr>
+            </div>
+            
+            <div class="row padrao crc">
+              <h5>CRC: 1-SC-036196-O-2</h5>
+              <code class="padrao crc"> Telefone: (49) 9.8433-7227</code>
+              <h5 class="padrao crc">E-mail: crescercontabilidade@hotmail.com</h5>
+              
+              <div class="row"></div>
+              <div class="col m12 l12">
+                
+              <a  href="#sobre" class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>    
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="section">
-      <!--   Icon Section   -->
+      
       <div class="row total">
         <div class="col s12 m12 center logo-centro">
             <div class="center-align logo">
-            <img src="img/logomarca_CRM.png" class="responsive-img " width="400px" alt=" Logomarca Crecer Contabilidade">
-            <br><br>
-            <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-            <h5 class="center-align padrao">Acrescentar Conquistas, Somar Conhecimento e Adicionar Satisfação.</h5>
+              <img src="img/logo1.png" class="responsive-img " width="400px" alt=" Logomarca Crecer Contabilidade">
+              <br><br>
+              <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+              <h5 class="center-align padrao">Acrescentar Conquistas, Somar Conhecimento e Adicionar Satisfação.</h5>
             </div>
-            <div class="row">
+            <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+            <div class="row padrao crc">
+              <h5>CRC: 1-SC-036196-O-2</h5>
+              <h5 class="padrao crc"> Telefone: (49) 9.8433-7227</h5>
+              <h5 class="padrao crc">E-mail: crescercontabilidade@hotmail.com</h5>
               <div class="row"></div>
               <div class="col m12 l12">
-                <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-                <a  href="#sobre" class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
+                
+              <a  href="#sobre" class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
               </div>
             </div>
         </div>
@@ -48,7 +84,7 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
   <!-- Nova camada-->
   <div id="sobre" class="padrao2-fundo">
     <div  class="section" >
@@ -67,13 +103,13 @@
           <p></p>
           <div class="container">
             <div class="col l10 justificado">
-              <h5>Missão</h5>
+              <h5>Nossa Missão</h5>
               <p>Assessorar e executar tecnicamente as informações para tomada de decisões e crescimento dos clientes, prestando serviços com qualidade e competência, buscando a total satisfação dos nossos clientes, funcionários, fornecedores e comunidade com responsabilidade e respeito.</p>
               <br><br>
             </div>
             <p></p>
             <div class="col l10 justificado ">
-              <h5>Vissão</h5>
+              <h5>Nossa Vissão</h5>
               <p>Ser uma empresa modelo com excelência no segmento contábil, buscando inovações tecnológicas, objetivando a otimização de tempo, redução de custos, lucratividade e solidez constante no mercado.</p>
             <br><br>
             </div>

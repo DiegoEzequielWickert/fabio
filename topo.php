@@ -29,9 +29,6 @@
 ?>
 <div class="navbar-fixed">   
     <nav>
-      <div class="nav-telefone col l12 m12 s12">
-           
-      </div>
       <div class="nav-wrapper padrao-fundo">
         <a href="<?php echo $inicio;?>" class="brand-logo padrao">
           <img src="<?php echo $imagem; ?>" class="responsive-img logo-nav" alt="Logo">
