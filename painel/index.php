@@ -17,9 +17,9 @@
     <div class="nav-wrapper padrao-fundo fixed">
       <a href="#" class="brand-logo center white-text">Self v1.0 - Crescer</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down ">
-        <li><a href="servico.php" class="white-text">Serviços</a></li>
-        <li><a href="clientes.php" class="white-text">Clientes</a></li>
-        <li><a href="representante.php" class="white-text">Representantes</a></li>
+        <li><a href="index.php" class="white-text"><i class="material-icons left">home</i>Inicio</a></li>
+        <li><a href="../index.php" class="white-text">Site</a></li>
+        <li><a href="logout.php" class="white-text"><i class="material-icons left">settings_power</i>Sair</a></li>
       </ul>
     </div>
   </nav>
