@@ -72,8 +72,8 @@ if(isset($_GET['page'])){
       <td".$efeito.">".$exibe['ser_status']."</td>
       <td".$efeito.">".$exibe['ser_datacadastro']."</td>
       <td".$efeito.">".$exibe['ser_novo']."</td>
-      <td><a href='#''><i class='material-icons green-text'>edit</i></a></td>
-      <td><a href='#'><i class='material-icons padrao'>delete_forever</i></a></td>
+      <td><a href='#''><i class='material-icons padrao'>edit</i></a></td>
+      <td><a href='#'><i class='material-icons red-text'>delete_forever</i></a></td>
       </tr>";
     }
     ?>

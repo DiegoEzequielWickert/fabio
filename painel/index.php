@@ -16,9 +16,9 @@
   <nav>
     <div class="nav-wrapper padrao-fundo fixed">
       <a href="#" class="brand-logo center white-text">Self v1.0 - Crescer</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down ">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="index.php" class="white-text"><i class="material-icons left">home</i>Inicio</a></li>
-        <li><a href="../index.php" class="white-text">Site</a></li>
+        <li><a href="../" class="white-text">Site</a></li>
         <li><a href="logout.php" class="white-text"><i class="material-icons left">settings_power</i>Sair</a></li>
       </ul>
     </div>
@@ -32,18 +32,19 @@
     <hr>
   </div>
 
-  <div class=" row container">
+  <div class="row container">
     <div class="collection with-header col l3 pull-l2">
       <div class="row"></div>
       <li class="collection-header">
-        <img src="../img/logo1.png" alt="Logomarca Crescer" width="100px" class="responive-img"></li>
+        <img src="../img/logo1.png" alt="Logomarca Crescer" width="100px" class="responive-img">
+      </li>
       <div class="row"></div>
-      <a href="?page=servicos" class="collection-item lista"> <i class="material-icons right small ">work</i>Serviços</a>
-      <a href="?page=atividades" class="collection-item lista"> <i class="material-icons right small">work</i>Atividades</a>
-      <a href="?page=clientes" class="collection-item lista"> <i class="material-icons right small">work</i>Clientes</a>
-      <a href="?page=representantes" class="collection-item lista"> <i class="material-icons right small">work</i>Representantes</a>
-      <a href="?page=cont_rec" class="collection-item lista"> <i class="material-icons right small">mail</i>Contato Recebido</a>
-      <a href="?page=mail_mark" class="collection-item lista"> <i class="material-icons right small">mail</i>E-mail Markting</a>
+      <a href="?page=servicos" class="collection-item lista"><i class="material-icons right small ">work</i>Serviços</a>
+      <a href="?page=atividades" class="collection-item lista"><i class="material-icons right small">work</i>Atividades</a>
+      <a href="?page=clientes" class="collection-item lista"><i class="material-icons right small">work</i>Clientes</a>
+      <a href="?page=representantes" class="collection-item lista"><i class="material-icons right small">work</i>Representantes</a>
+      <a href="?page=cont_rec" class="collection-item lista"><i class="material-icons right small">mail</i>Contato Recebido</a>
+      <a href="?page=mail_mark" class="collection-item lista"><i class="material-icons right small">mail</i>E-mail Markting</a>
     </div>
   </ul>
     <div class="col l9">
