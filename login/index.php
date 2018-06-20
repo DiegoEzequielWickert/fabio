@@ -32,12 +32,12 @@
                         </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input id="nome" type="text" required="required" class="validate">
-                                <label for="nome">Usuário:</label>
+                                <input id="email" name="mail" autocomplete="off" type="text" required="required" class="validate">
+                                <label for="mail">Usuário:</label>
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">fingerprint</i>
-                                <input id="senha" required="required" type="password" class="validate">
+                                <input id="senha" name="senha" required="required" autocomplete="off" type="password" class="validate">
                                 <label for="senha">Senha:</label>
                             </div>
                             <div class="row center-align">

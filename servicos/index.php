@@ -31,8 +31,8 @@
   <?php 
     require('../topo.php');
   ?>
-  <br><br><br><br><br>
-    <div class="container center">
+  <br>
+    <div class="container">
       <h4>Como a <code>Crescer</code> Pode Te Ajudar Hoje? </h4>
       
       <br>
@@ -40,18 +40,23 @@
              <?php
                 $result = "select * from t_servicos where ser_status = 'A'";  
                 $resultado = mysqli_query($mysqli, $result); 
-
+                $aux = 0;
                 while($exibe = mysqli_fetch_assoc($resultado)){
                   
-                  
-
-                  echo '<div class="col s12 m12 l6">
-                          <div class="card-panel z-depth-3">
-                            <i class="material-icons large">domain</i>
-                            <br><span class="badge red white-text left">Novo!!!! </span>
+                // a cada duas  colunas ele da uma nova linha  
+                // if($aux == 0){
+                //     echo '<div class="row">';
+                //     $aux = 1;
+                // }else{
+                //     $aux = 0;
+                // }
+                  echo '<div class="col s12 m12 l12" >
+                          <div class="card-panel z-depth-2">
+                            
+                            <span class="badge red white-text left">Novo!!!! </span>
 
                             <h5>'.$exibe['ser_descricao'].'</h5>
-                              <ol align="left">
+                              <ul>
                             ';
                   // consulta para  pegar as  ativides ATIVAS  
                   $sql2 = "select * from t_atividade where ser_codigo =".$exibe['ser_codigo']." and ati_status = 'A' ";
@@ -61,16 +66,18 @@
                       if (!$atividade) {
                         echo "<li align='left'> Nenhuma atividade Cadastrada </li>";
                       }else{
-                        echo "<li align='left'>".$atividade['ati_descricao']." </li>";
+                        echo "<li> - ".$atividade['ati_descricao']." </li>";
                       }
                   }                 
-                  echo ' </ol>
+                  echo ' </ul>
                         </div>    
                       </div>';
+                  // if($aux == 0){
+                  //   echo "</div>";
+                  
+                  // }
                 }
               ?> 
-             
-            
                     
       </div>
    </div>

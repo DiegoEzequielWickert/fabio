@@ -1,44 +1,79 @@
-<?php 
-   // aqui define o Nivel de página que o Usuário está 
-   
-   date_default_timezone_set('America/Sao_Paulo');
+
+
+<?php
+    // verifica se foi pasado por direcionamento correto 
+if(isset($_GET['page'])){
+      //verifica se o direcionamento é mesmo para   serviços
+  if(!$_GET['page']== 'servicos'){
+    header('Location:index.php?acess=danied-servicos');
+  }else{
+    echo "<h5> Página Serviços</h5>";
+  }
+
+}
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title> Serviços| Crescer Contabilidade</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<a class="waves-effect waves-light btn modal-trigger padrao-fundo" href="#modal1"><i class="material-icons large left">add</i>Cadastrar Serviço</a>
 
-<table>
-        <thead>
-          <tr>
-              <th>Name</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
-          </tr>
-        </thead>
 
-        <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal">
+    <div class="modal-content">
+      <h4>Cadastro de  Serviços</h4>
+      <div class="row">
+        <p class ="justificado" >Use este campo para cadastrar um novo serviço. Depois disso você precisa vincular atividades para  este serviço. Por padrão em um novo cadastro o serviços já aparece com ativo.</p>
+        <code class="red-text">CARACTERES INVÀLIDOS: @ # $ % & ! " ' ? </code>
+        <div class="input-field col s12">
+          <form action="valida_serviço" method="POST">
+          <input id="novo" name="novo_ser" type="text" data-length="60" class="validate">
+          <label for="novo">Novo Serviço</label>
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit"  name="cadastro_servico" class="btn padrao fundo waves-effect waves-black btn-flat">Enviar</a>
+      </form>
+    </div>
+  </div>
+
+
+<table class="responsive-table highlight striped">
+  <thead>
+    <tr>
+      <th>Ordem</th>
+      <th>Codigo</th>
+      <th>Descrição</th>
+      <th>Status</th>
+      <th>Criado Em</th>
+      <th>Novo Até</th>
+      <th>Edição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php 
+    require('../conecta_db.php');
+    $result = "select * from t_servicos order by ser_ordem";  
+    $resultado = mysqli_query($mysqli, $result); 
+    $aux = 0;
+    while($exibe = mysqli_fetch_assoc($resultado)){
+      if($exibe['ser_status']=='I'){
+        $efeito = ' class="inativo" ';
+      }else{
+        $efeito = " ";                
+      }
+      echo"
+      <tr>
+      <td".$efeito.">".$exibe['ser_ordem']." </td>
+      <td".$efeito.">".$exibe['ser_codigo']."</td>
+      <td".$efeito.">".$exibe['ser_descricao']."</td>
+      <td".$efeito.">".$exibe['ser_status']."</td>
+      <td".$efeito.">".$exibe['ser_datacadastro']."</td>
+      <td".$efeito.">".$exibe['ser_novo']."</td>
+      <td><i class='material-icons'>edit</i></td>
+      </tr>";
+    }
+    ?>
+  </tbody>
+</table>
+

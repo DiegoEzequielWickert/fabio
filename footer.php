@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <br><br>
-      <h5>Precisando de Ajuda?</h5>
+      <h5>No que podemos lhe ajudar?</h5>
         <p>Solicite um contato, além de ser nosso trabalho, amamos o que fazemos!
         <br><br>
         <a class="waves-effect waves-light btn padrao-fundo" href="<?php echo $contato;?>"> 
