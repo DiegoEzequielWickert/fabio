@@ -33,7 +33,7 @@
   </div>
 
   <div class=" row container">
-    <div class="collection with-header col l3">
+    <div class="collection with-header col l3 pull-l2">
       <div class="row"></div>
       <li class="collection-header">
         <img src="../img/logo1.png" alt="Logomarca Crescer" width="100px" class="responive-img"></li>
@@ -46,7 +46,7 @@
       <a href="?page=mail_mark" class="collection-item lista"> <i class="material-icons right small">mail</i>E-mail Markting</a>
     </div>
   </ul>
-    <div class="col l9 push-l1">
+    <div class="col l9">
 
       <?php 
           if(isset($_GET['page'])){

@@ -25,6 +25,7 @@ if(isset($_GET['page'])){
         <code class="red-text">CARACTERES INVÀLIDOS: @ # $ % & ! " ' ? </code>
         <div class="input-field col s12">
           <form action="valida_serviço" method="POST">
+          <i class="material-icons prefix">mode_edit</i>
           <input id="novo" name="novo_ser" type="text" data-length="60" class="validate">
           <label for="novo">Novo Serviço</label>
         </div>
@@ -32,7 +33,7 @@ if(isset($_GET['page'])){
 
     </div>
     <div class="modal-footer">
-      <button type="submit"  name="cadastro_servico" class="btn padrao fundo waves-effect waves-black btn-flat">Enviar</a>
+      <button type="submit"  name="cadastro_servico" class="btn left padrao-fundo col  l2 m6 s12 push-l5 white-text waves-effect waves-black btn-flat">Salvar</a>
       </form>
     </div>
   </div>
@@ -48,6 +49,7 @@ if(isset($_GET['page'])){
       <th>Criado Em</th>
       <th>Novo Até</th>
       <th>Edição</th>
+      <th>Excluir</th>
     </tr>
   </thead>
   <tbody>
@@ -70,7 +72,8 @@ if(isset($_GET['page'])){
       <td".$efeito.">".$exibe['ser_status']."</td>
       <td".$efeito.">".$exibe['ser_datacadastro']."</td>
       <td".$efeito.">".$exibe['ser_novo']."</td>
-      <td><i class='material-icons'>edit</i></td>
+      <td><a href='#''><i class='material-icons green-text'>edit</i></a></td>
+      <td><a href='#'><i class='material-icons padrao'>delete_forever</i></a></td>
       </tr>";
     }
     ?>
