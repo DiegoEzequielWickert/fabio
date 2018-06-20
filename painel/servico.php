@@ -21,7 +21,7 @@ if(isset($_GET['page'])){
     <div class="modal-content">
       <h4>Cadastro de  Serviços</h4>
       <div class="row">
-        <p class ="justificado" >Use este campo para cadastrar um novo serviço. Depois disso você precisa vincular atividades para  este serviço. Por padrão em um novo cadastro o serviços já aparece com ativo.</p>
+        <p class ="justificado" >Use este campo para cadastrar um novo serviço. Depois disso você precisa vincular atividades para  este serviço. Por padrão em um novo cadastro o serviços já aparece com ativo. Sobre a ordem vai cadastrar no FIM DA FILA. Deve ser ajustado a ordem caso queira posteriormente.</p>
         <code class="red-text">CARACTERES INVÀLIDOS: @ # $ % & ! " ' ? </code>
         <div class="input-field col s12">
           <form action="valida_serviço" method="POST">
