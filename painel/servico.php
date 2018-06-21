@@ -24,7 +24,7 @@ if(isset($_GET['page'])){
         <p class ="justificado" >Use este campo para cadastrar um novo serviço. Depois disso você precisa vincular atividades para  este serviço. Por padrão em um novo cadastro o serviços já aparece com ativo. Sobre a ordem vai cadastrar no FIM DA FILA. Deve ser ajustado a ordem caso queira posteriormente.</p>
         <code class="red-text">CARACTERES INVÀLIDOS: @ # $ % & ! " ' ? </code>
         <div class="input-field col s12">
-          <form action="valida_serviço" method="POST">
+          <form action="valida_servico.php" method="POST">
           <i class="material-icons prefix">mode_edit</i>
           <input id="novo" name="novo_ser" type="text" data-length="60" class="validate">
           <label for="novo">Novo Serviço</label>

@@ -36,15 +36,17 @@
     <div class="collection with-header col l3 pull-l2">
       <div class="row"></div>
       <li class="collection-header">
-        <img src="../img/logo1.png" alt="Logomarca Crescer" width="100px" class="responive-img">
+        <a href="index.php">
+          <img src="../img/logo1.png" alt="Logomarca Crescer" width="100px" class="responive-img">
+        </a>
       </li>
       <div class="row"></div>
-      <a href="?page=servicos" class="collection-item lista"><i class="material-icons right small ">work</i>Serviços</a>
-      <a href="?page=atividades" class="collection-item lista"><i class="material-icons right small">work</i>Atividades</a>
-      <a href="?page=clientes" class="collection-item lista"><i class="material-icons right small">work</i>Clientes</a>
-      <a href="?page=representantes" class="collection-item lista"><i class="material-icons right small">work</i>Representantes</a>
-      <a href="?page=cont_rec" class="collection-item lista"><i class="material-icons right small">mail</i>Contato Recebido</a>
-      <a href="?page=mail_mark" class="collection-item lista"><i class="material-icons right small">mail</i>E-mail Markting</a>
+      <a href="?page=servicos" class="collection-item lista"><i class="material-icons left small ">work</i>Serviços</a>
+      <a href="?page=atividades" class="collection-item lista"><i class="material-icons left small">work</i>Atividades</a>
+      <a href="?page=clientes" class="collection-item lista"><i class="material-icons left small">work</i>Clientes</a>
+      <a href="?page=representantes" class="collection-item lista"><i class="material-icons left small">work</i>Representantes</a>
+      <a href="?page=cont_rec" class="collection-item lista"><i class="material-icons left small">mail</i>Contato Recebido</a>
+      <a href="?page=mail_mark" class="collection-item lista"><i class="material-icons left small">mail</i>E-mail Markting</a>
     </div>
   </ul>
     <div class="col l9">
@@ -56,8 +58,12 @@
             if($page =='servicos'){require('servico.php');}
             else if($page =='clientes'){require('clientes.php');}
             else if($page == 'representantes'){require('representantes.php');}
-            else { echo "<h5> Seja Bem vindo ao Self </h5> <h1> Nenhuma Página Carregada</h1> Colocar  aqui os BI's";}
+            else { echo "<h1> Erro! -- Nenhuma Página Carregada</h1>";}
 
+          }else { 
+            echo "<h1> Seja Bem vindo ao Self </h1>
+                  <h5 class='justificado'>  O seu sistema  de  gestão de conteudo. É preciso selecionar uma página na aba esquerda. As alterações refletem diretamente no site, então.</h5>
+                    Colocar  aqui os BI's";
           }
       ?>
     </div>
