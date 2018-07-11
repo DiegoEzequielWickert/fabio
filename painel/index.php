@@ -28,12 +28,12 @@
   <div class="container col l10 center">
     <h5>Painel de  Gestão de Conteudo - Crescer Contabilidade</h5>
     
-    <p> Sistema de  gestão Self - Crescer Contabilidade</p>
+    <p> Sistema de  Gestão Self - Crescer Contabilidade</p>
     <hr>
   </div>
 
   <div class="row container">
-    <div class="collection with-header col l3 pull-l2">
+    <div class="collection with-header col m4 l3 pull-l2">
       <div class="row"></div>
       <li class="collection-header">
         <a href="index.php">
@@ -41,12 +41,12 @@
         </a>
       </li>
       <div class="row"></div>
-      <a href="?page=servicos" class="collection-item lista"><i class="material-icons left small ">work</i>Serviços</a>
-      <a href="?page=atividades" class="collection-item lista"><i class="material-icons left small">work</i>Atividades</a>
-      <a href="?page=clientes" class="collection-item lista"><i class="material-icons left small">work</i>Clientes</a>
-      <a href="?page=representantes" class="collection-item lista"><i class="material-icons left small">work</i>Representantes</a>
-      <a href="?page=cont_rec" class="collection-item lista"><i class="material-icons left small">mail</i>Contato Recebido</a>
-      <a href="?page=mail_mark" class="collection-item lista"><i class="material-icons left small">mail</i>E-mail Markting</a>
+      <a href="?page=servicos" class="collection-item lista"><i class="material-icons left tiny ">work</i>Serviços</a>
+      <a href="?page=atividades" class="collection-item lista"><i class="material-icons left tiny">work</i>Atividades</a>
+      <a href="?page=clientes" class="collection-item lista"><i class="material-icons left tiny">work</i>Clientes</a>
+      <a href="?page=representantes" class="collection-item lista"><i class="material-icons tiny left">work</i>Representantes</a>
+      <a href="?page=cont_rec" class="collection-item lista"><i class="material-icons left tiny">mail</i>Contato Recebido</a>
+      <a href="?page=mail_mark" class="collection-item lista"><i class="material-icons left tiny">mail</i>E-mail Markting</a>
     </div>
   </ul>
     <div class="col l9">
@@ -58,6 +58,7 @@
             if($page =='servicos'){require('servico.php');}
             else if($page =='clientes'){require('clientes.php');}
             else if($page == 'representantes'){require('representantes.php');}
+            else if ($page == 'edit'){require('edit.php');}
             else { echo "<h1> Erro! -- Nenhuma Página Carregada</h1>";}
 
           }else { 
@@ -90,6 +91,7 @@
   $(document).ready(function() {
     $('input#novo').characterCounter();
   });
+
 </script>
 </body>
 </html> 

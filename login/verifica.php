@@ -36,6 +36,7 @@
                 echo "SQL: ".$sql;
                 //$query = mysqli_query($mysqli, $sql);
                 if($query){
+                    $_SESSION['usuario'] = '$usarname';
                     header('Location:cliente.php?sucess=yes'); // redireciona para o index
 
                 }else{

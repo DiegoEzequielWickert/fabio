@@ -26,7 +26,7 @@ if(isset($_GET['page'])){
         <div class="input-field col s12">
           <form action="valida_servico.php" method="POST">
           <i class="material-icons prefix">mode_edit</i>
-          <input id="novo" name="novo_ser" type="text" data-length="60" class="validate">
+          <input id="novo" name="novo_ser" type="text" data-length="60" required="required" class="validate">
           <label for="novo">Novo Serviço</label>
         </div>
       </div>
@@ -72,8 +72,8 @@ if(isset($_GET['page'])){
       <td".$efeito.">".$exibe['ser_status']."</td>
       <td".$efeito.">".$exibe['ser_datacadastro']."</td>
       <td".$efeito.">".$exibe['ser_novo']."</td>
-      <td><a href='#''><i class='material-icons padrao'>edit</i></a></td>
-      <td><a href='#'><i class='material-icons red-text'>delete_forever</i></a></td>
+      <td><a href='?page=edit&p=Servicos&ser_codigo=".$exibe['ser_codigo']."'><i class='material-icons padrao'>edit</i></a></td>
+      <td><a href='?page=servicos&delete=".$exibe['ser_codigo']."'><i class='material-icons red-text'>delete_forever</i></a></td>
       </tr>";
     }
     ?>
