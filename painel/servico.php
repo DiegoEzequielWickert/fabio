@@ -12,11 +12,13 @@ if(isset($_GET['page'])){
 
 }
 ?>
-
-<a class="waves-effect waves-light btn modal-trigger padrao-fundo" href="#modal1"><i class="material-icons large left">add</i>Cadastrar Serviço</a>
-
+<div class="row">
+  <a class="waves-effect waves-light btn modal-trigger padrao-fundo" href="#modal1"><i class="material-icons large left">add</i>Cadastrar Serviço</a>
+  <a class="waves-effect waves-light btn modal-trigger red" href="?page=delete&p=Servicos"><i class="material-icons large left">delete_forever</i>Excluir Serviço</a>
+</div>
 
   <!-- Modal Structure -->
+<div class="row">
   <div id="modal1" class="modal modal">
     <div class="modal-content">
       <h4>Cadastro de  Serviços</h4>
@@ -37,46 +39,46 @@ if(isset($_GET['page'])){
       </form>
     </div>
   </div>
+</div>
 
-
-<table class="responsive-table highlight striped">
-  <thead>
-    <tr>
-      <th>Ordem</th>
-      <th>Codigo</th>
-      <th>Descrição</th>
-      <th>Status</th>
-      <th>Criado Em</th>
-      <th>Novo Até</th>
-      <th>Edição</th>
-      <th>Excluir</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php 
-    require('../conecta_db.php');
-    $result = "select * from t_servicos order by ser_ordem";  
-    $resultado = mysqli_query($mysqli, $result); 
-    $aux = 0;
-    while($exibe = mysqli_fetch_assoc($resultado)){
-      if($exibe['ser_status']=='I'){
-        $efeito = ' class="inativo" ';
-      }else{
-        $efeito = " ";                
-      }
-      echo"
+<div class="row">
+  <table class="responsive-table highlight striped">
+    <thead>
       <tr>
-      <td".$efeito.">".$exibe['ser_ordem']." </td>
-      <td".$efeito.">".$exibe['ser_codigo']."</td>
-      <td".$efeito.">".$exibe['ser_descricao']."</td>
-      <td".$efeito.">".$exibe['ser_status']."</td>
-      <td".$efeito.">".$exibe['ser_datacadastro']."</td>
-      <td".$efeito.">".$exibe['ser_novo']."</td>
-      <td><a href='?page=edit&p=Servicos&ser_codigo=".$exibe['ser_codigo']."'><i class='material-icons padrao'>edit</i></a></td>
-      <td><a href='?page=servicos&delete=".$exibe['ser_codigo']."'><i class='material-icons red-text'>delete_forever</i></a></td>
-      </tr>";
-    }
-    ?>
-  </tbody>
-</table>
-
+        <th>Ordem</th>
+        <th>Codigo</th>
+        <th>Descrição</th>
+        <th>Status</th>
+        <th>Criado Em</th>
+        <th>Novo Até</th>
+        <th>Edição</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <?php 
+      require('../conecta_db.php');
+      $result = "select * from t_servicos order by ser_ordem";  
+      $resultado = mysqli_query($mysqli, $result); 
+      $aux = 0;
+      while($exibe = mysqli_fetch_assoc($resultado)){
+        if($exibe['ser_status']=='I'){
+          $efeito = ' class="inativo" ';
+        }else{
+          $efeito = " ";                
+        }
+        echo"
+        <tr>
+        <td".$efeito.">".$exibe['ser_ordem']." </td>
+        <td".$efeito.">".$exibe['ser_codigo']."</td>
+        <td".$efeito.">".$exibe['ser_descricao']."</td>
+        <td".$efeito.">".$exibe['ser_status']."</td>
+        <td".$efeito.">".$exibe['ser_datacadastro']."</td>
+        <td".$efeito.">".$exibe['ser_novo']."</td>
+        <td><a href='?page=edit&p=Servicos&ser_codigo=".$exibe['ser_codigo']."'><i class='material-icons padrao'>edit</i></a></td>
+        </tr>";
+      }
+      ?>
+    </tbody>
+  </table>
+</div>

@@ -126,7 +126,7 @@ h3{
 h4{
   margin-top:75px;
 }
-formulario{
+.formulario{
   font-size: 18pt;  
   color: red !important;
 }
@@ -151,4 +151,7 @@ formulario{
 }
 .inativo{
   color:red !important;
+}
+.sucesso{
+  font-size: 16pt !important ;
 }

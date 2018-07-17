@@ -11,6 +11,7 @@
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
+  
 </head> 
 <body>
   <nav>
@@ -59,6 +60,7 @@
             else if($page =='clientes'){require('clientes.php');}
             else if($page == 'representantes'){require('representantes.php');}
             else if ($page == 'edit'){require('edit.php');}
+            else if ($page == 'delete'){require('delete.php');}
             else { echo "<h1> Erro! -- Nenhuma Página Carregada</h1>";}
 
           }else { 
@@ -90,6 +92,9 @@
   });
   $(document).ready(function() {
     $('input#novo').characterCounter();
+  });
+  $(document).ready(function(){
+    $('select').formSelect();
   });
 
 </script>

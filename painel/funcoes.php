@@ -1,7 +1,20 @@
 <?php 
+	function excluir_servico($cod_servico){
+		require('../conecta_db.php');
+		$sql = "DELETE FROM `t_servicos` WHERE ser_codigo = ".$cod_servico;
+		echo "SQL:".$sql;
+		
+		$resultado = mysqli_query($mysqli, $sql); 
+		if($resultado){
+			header('Location:index.php?page=delete&p=Servicos&sucess=true');
+		}else{
+			return 0;
+		}
+	}
+
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-		if(isset($_POST['edit_servico'])){
+		if(isset($_POST['editar_btn'])){
 			//se existe uma alteração no nome do serviço
 			echo "Existe um POST com Serviços<br>";	
 			$descricao = $_POST['servico_desc_new'];
@@ -9,11 +22,19 @@
 			if(atualizaServicoDescricao($descricao,$ser_cod)){
 				header('Location:index.php?page=servicos&edit=sucess');
 			}
+		}else if(isset($_POST['excluir_btn'])){
+			/* VERIFICA SE  FOI ENVIADO UM EXCLUIR SERVICOS*/
+			echo ".. Excluindo Serviço...<br>";
+			echo "EKOOO".$_POST['option_servico']."<br>";
+			echo "Passou aqui:".$_POST['option_servico']."<br>";
+			return excluir_servico($_POST['option_servico']);
 
 		}else{
 			echo "Erro de passagem de parametros";
 		}
 	}
+
+	
 
 	function atualizaServicoDescricao($descricao,$ser_codigo){
 		/*
@@ -65,7 +86,7 @@
 
 		$resultado = mysqli_query($mysqli, $sql); 
 		if($resultado){
-			return 1;
+			header('Location:index.php?page=servicos&p=Servicos&sucess=true');
 		}else{
 			return 0;
 		}
