@@ -1,4 +1,6 @@
-<?php date_default_timezone_set('America/Sao_Paulo');  ?>
+<?php 
+  session_start();
+  date_default_timezone_set('America/Sao_Paulo');  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -61,12 +63,13 @@
             else if($page == 'representantes'){require('representantes.php');}
             else if ($page == 'edit'){require('edit.php');}
             else if ($page == 'delete'){require('delete.php');}
+            else if ($page == 'atividades'){require('atividades.php');}
             else { echo "<h1> Erro! -- Nenhuma Página Carregada</h1>";}
 
           }else { 
             echo "<h1> Seja Bem vindo ao Self </h1>
                   <h5 class='justificado'>  O seu sistema  de  gestão de conteudo. É preciso selecionar uma página na aba esquerda. As alterações refletem diretamente no site, então.</h5>
-                    Colocar  aqui os BI's";
+                 ";
           }
       ?>
     </div>

@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	function excluir_servico($cod_servico){
 		require('../conecta_db.php');
 		$sql = "DELETE FROM `t_servicos` WHERE ser_codigo = ".$cod_servico;
@@ -11,6 +12,37 @@
 			return 0;
 		}
 	}
+
+
+
+	function addAtividade($atividade,$servico){
+		require('../conecta_db.php');
+		$sql = "INSERT INTO t_atividade ( ati_descricao, ser_codigo, ati_status, ati_usuario) VALUES ( '".$atividade."', '".$servico."', 'A', ".$_SESSION['codigo'].")";
+		echo "SQL NEW:".$sql;
+		
+		$resultado = mysqli_query($mysqli, $sql); 
+		if($resultado){
+			header('Location:index.php?page=atividades&p=Atividade&sucess=true');
+		}else{
+			header('Location:index.php?page=atividades&p=Atividade&fail=true');
+		}
+	}
+	function excluir_atividade($cod_atividade){
+		require('../conecta_db.php');
+		$sql = "DELETE FROM `t_atividade` WHERE ati_codigo = ".$cod_atividade;
+		echo "SQL:".$sql;
+		
+		$resultado = mysqli_query($mysqli, $sql); 
+		if($resultado){
+			header('Location:index.php?page=delete&p=Atividades&sucess=true');
+		}else{
+			return 0;
+		}
+	}
+
+/***********************************************************************************/
+
+//EXECUTA SERVICO
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -25,10 +57,23 @@
 		}else if(isset($_POST['excluir_btn'])){
 			/* VERIFICA SE  FOI ENVIADO UM EXCLUIR SERVICOS*/
 			echo ".. Excluindo Serviço...<br>";
-			echo "EKOOO".$_POST['option_servico']."<br>";
-			echo "Passou aqui:".$_POST['option_servico']."<br>";
-			return excluir_servico($_POST['option_servico']);
+			
+			if ($_GET['page']=="Atividades") {
 
+				return excluir_atividade($_POST['option_servico']);
+			
+			}else if($_GET['page']=="Servicos"){
+				echo "Passou aqui:".$_POST['option_servico']."<br>";
+				return excluir_servico($_POST['option_servico']);
+
+			}else{ echo "ERRO NA PASSAGEM DE PARAMETROS PAGE = ENTROU NO EXLUIR (P = ".$_GET['page'].")";}
+
+		
+		}else if(isset($_POST['btn_atividade'])){
+			// se exite um cadastro de atividade
+			echo "<br> Entrou no Atividades, Enviando";
+			addAtividade($_POST['desc_atividade'],$_POST['option_atividade']);
+		
 		}else{
 			echo "Erro de passagem de parametros";
 		}

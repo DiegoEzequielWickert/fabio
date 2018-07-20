@@ -10,7 +10,7 @@
 ?>
 <div class="row">
 	<i class="material-icons small red-text">warning</i>
-	Deseja realmente alterar a descrição??? Você ainda pode alterar quantas vezes quiser, mas lembrando que as alterações são refletidas imediatamente no site.
+	Deseja realmente alterar a descrição??? Lembrando que as alterações são refletidas imediatamente no site.
 
 </div>
 <div class="row">

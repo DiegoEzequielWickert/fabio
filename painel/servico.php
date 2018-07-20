@@ -25,11 +25,16 @@ if(isset($_GET['page'])){
       <div class="row">
         <p class ="justificado" >Use este campo para cadastrar um novo serviço. Depois disso você precisa vincular atividades para  este serviço. Por padrão em um novo cadastro o serviços já aparece com ativo. Sobre a ordem vai cadastrar no FIM DA FILA. Deve ser ajustado a ordem caso queira posteriormente.</p>
         <code class="red-text">CARACTERES INVÀLIDOS: @ # $ % & ! " ' ? </code>
-        <div class="input-field col s12">
-          <form action="valida_servico.php" method="POST">
+        <form action="valida_servico.php" method="POST">
+        <div class="input-field col s12">          
           <i class="material-icons prefix">mode_edit</i>
           <input id="novo" name="novo_ser" type="text" data-length="60" required="required" class="validate">
           <label for="novo">Novo Serviço</label>
+        </div>
+        <div class="input-field col s12">          
+          <i class="material-icons prefix">fiber_new</i>
+          <input id="data" name="data_ser" type="date"  required="required" class="validate">
+          <label for="novo">Data Novo - Data > Hoje se não Novo</label>
         </div>
       </div>
 
@@ -62,10 +67,14 @@ if(isset($_GET['page'])){
       $resultado = mysqli_query($mysqli, $result); 
       $aux = 0;
       while($exibe = mysqli_fetch_assoc($resultado)){
+        //se o status for I ele  seta a classe para  ficar  vermelho  
         if($exibe['ser_status']=='I'){
           $efeito = ' class="inativo" ';
+          $exibe['ser_status'] = "Inativo";
         }else{
+          // se o status  for A ele mantem sem nada a classe
           $efeito = " ";                
+          $exibe['ser_status'] = "Ativo";
         }
         echo"
         <tr>
@@ -74,7 +83,7 @@ if(isset($_GET['page'])){
         <td".$efeito.">".$exibe['ser_descricao']."</td>
         <td".$efeito.">".$exibe['ser_status']."</td>
         <td".$efeito.">".$exibe['ser_datacadastro']."</td>
-        <td".$efeito.">".$exibe['ser_novo']."</td>
+        <td".$efeito.">".date('d/m/Y', strtotime($exibe['ser_novo']))."</td>
         <td><a href='?page=edit&p=Servicos&ser_codigo=".$exibe['ser_codigo']."'><i class='material-icons padrao'>edit</i></a></td>
         </tr>";
       }

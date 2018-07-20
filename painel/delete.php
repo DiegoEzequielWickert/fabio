@@ -17,24 +17,29 @@
 			    	<i class="close material-icons">close</i>
 			  	</div>';
 		}
+		$pagina = $_GET['p'];
 	?>
-	<form action="funcoes.php?p=excluir_btn" method="POST">
+	<form action="funcoes.php?p=excluir_btn&page=<?php echo $pagina.'"';  ?> method="POST">
 		<div class="input-field col s12">
 		    <select name="option_servico">
-		    	<option   disabled selected>Selecione um serviço</option>
+		    	<option   disabled selected>Selecione uma opção</option>
 		    	<?php 
 		    		require ('../conecta_db.php');
-		    		$sql = "select * from t_servicos where ser_status = 'A'";
-		    		$resultado = mysqli_query($mysqli, $sql); 
-		    		
+		    		if ($_GET['p']=='Atividades') {
+		    			echo "Atividade<br>";
+		    			$sql = "select ati_codigo as codigo, ati_descricao as descricao  from t_atividade where ati_status = 'A'";	
+		    		}else if ($_GET['p']=="Servicos") {
+		    			$sql = "select ser_codigo as codigo,ser_descricao as descricao from t_servicos where ser_status = 'A'";
+		    		}else{ echo "ERRO DE PASSAGEM PARAMETRO P<br>";}
+		    		$resultado = mysqli_query($mysqli, $sql); 		    		
 		    		while ($exibe = mysqli_fetch_assoc($resultado)) {
-		    		 	echo "<option value='".$exibe['ser_codigo']."'>".$exibe['ser_codigo']." - ".$exibe['ser_descricao']."</option>";
+		    		 	echo "<option value='".$exibe['codigo']."'>".$exibe['codigo']." - ".$exibe['descricao']."</option>";
 		    		 }
 		    	?>
-		      <option value="Teste"> Teste de  velocidade</option>
+		      
 		      
 		    </select>
-		    <label>Selecione um serviços para  excluir</label>
+		    <label>Selecione para  excluir</label>
 		  </div>		
 		  <button type="submit" name="excluir_btn" class="waves-effect waves-light btn-large"> 
 		  <i class="material-icons left">delete_forever</i>

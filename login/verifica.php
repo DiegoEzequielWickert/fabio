@@ -2,6 +2,8 @@
     session_start(); //inicializa o uso de  sessão
     $_SESSION['erro'] = " ";
     $erro = 100;
+    $_SESSION['usuario'] = 'diego';
+    $_SESSION['codigo'] = '0';
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
         // caso tiver sido enviado  ele sai do  erro  100,  começa  a verificar  tudo de novo
