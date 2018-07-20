@@ -3,7 +3,7 @@
 		// esse arquivo recebe parametros para  excluir coisas;
 
 		if (!isset($_SESSION['usuario'])){
-				//header('location:index.php?acess=danied-edit');
+				header('location:../login/index.php?acess=danied-edit');
 			echo "<h5 class='red-text'>Verificar Permissão do Usuário</h5>";
 		}
 		
@@ -21,8 +21,8 @@
 	?>
 	<form action="funcoes.php?p=excluir_btn&page=<?php echo $pagina.'"';  ?> method="POST">
 		<div class="input-field col s12">
-		    <select name="option_servico">
-		    	<option   disabled selected>Selecione uma opção</option>
+		    <select name="option_servico" placeholder="Selecione uma opção">
+		    	
 		    	<?php 
 		    		require ('../conecta_db.php');
 		    		if ($_GET['p']=='Atividades') {
