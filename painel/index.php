@@ -64,6 +64,7 @@
             else if ($page == 'edit'){require('edit.php');}
             else if ($page == 'delete'){require('delete.php');}
             else if ($page == 'atividades'){require('atividades.php');}
+            else if ($page == 'ordem'){require('ordem.php');}
             else { echo "<h1> Erro! -- Nenhuma Página Carregada</h1>";}
 
           }else { 

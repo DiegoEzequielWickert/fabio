@@ -56,35 +56,6 @@
     </div>
   </div>    
 
-  <!-- <div class="container">
-    <div class="section">
-      
-      <div class="row total">
-        <div class="col s12 m12 center logo-centro">
-            <div class="center-align logo">
-              <img src="img/logo1.png" class="responsive-img " width="400px" alt=" Logomarca Crecer Contabilidade">
-              <br><br>
-              <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-              <h5 class="center-align padrao">Acrescentar Conquistas, Somar Conhecimento e Adicionar Satisfação.</h5>
-            </div>
-            <p center> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-            <div class="row padrao crc">
-              <h5>CRC: 1-SC-036196-O-2</h5>
-              <h5 class="padrao crc"> Telefone: (49) 9.8433-7227</h5>
-              <h5 class="padrao crc">E-mail: crescercontabilidade@hotmail.com</h5>
-              <div class="row"></div>
-              <div class="col m12 l12">
-                
-              <a  href="#sobre" class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
-              </div>
-            </div>
-        </div>
-        
-        
-      </div>
-
-    </div>
-  </div> -->
   <!-- Nova camada-->
   <div id="sobre" class="padrao2-fundo">
     <div  class="section" >
@@ -116,12 +87,12 @@
             <p></p>
             <div class="col l10 justificado">
               <h5>Valores</h5>
-              <ol>
-                <li>Foco no Crescimento do Cliente </li>
-                <li>Integridade, Ética e Transparência</li>
-                <li>Reconhecimento Humano e Intelectual</li>
-                <li>Profissionalismo</li>
-                <li>Qualidade e Melhoria Contínua</li> 
+              <ul>
+                <li><i class="material-icons tiny">check</i> Foco no Crescimento do Cliente </li>
+                <li><i class="material-icons tiny">check</i> Integridade, Ética e Transparência</li>
+                <li><i class="material-icons tiny">check</i> Reconhecimento Humano e Intelectual</li>
+                <li><i class="material-icons tiny">check</i> Profissionalismo</li>
+                <li><i class="material-icons tiny">check</i> Qualidade e Melhoria Contínua</li> 
               </ul>
               
             <br><br>

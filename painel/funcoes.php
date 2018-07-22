@@ -1,5 +1,7 @@
 <?php 
-	session_start();
+	//session_start();
+
+
 	function excluir_servico($cod_servico){
 		require('../conecta_db.php');
 		$sql = "DELETE FROM `t_servicos` WHERE ser_codigo = ".$cod_servico;
@@ -74,6 +76,37 @@
 			echo "<br> Entrou no Atividades, Enviando";
 			addAtividade($_POST['desc_atividade'],$_POST['option_atividade']);
 		
+
+		}else if(isset($_POST['btn_ordem'])){
+			/*
+				* RECEBEU UMA ATUALIZAÇÃO DE POSICAO
+				* TIRA OS ESPAÇOS EM BRANCO, COLOCANDO A ORDEM DE TODOS SEQUENCIAL
+				* BUSCA A  ORDEM QUE DESEJA  SER COLOCADO, SEMPRE VAI DIMINUIR UM NA ORDEM QUE DESEJA, PARA  COLOCAR ENTRE ELES
+				* NO FINAL AJUSTA A  ORDEM DE NOVO COMEÇANDO EM  1
+			*/
+			echo "<br> Entrou FUncçoes ORDEM";
+			$cod_servico = $_POST['option_servico'];
+			$ordem = $_POST['option_ordem'];
+			ajustaOrdem();
+			echo "<br>VAMOS MEXER AGORA";
+			//$total_servico = getTotalServico();
+			require('../conecta_db.php');
+			$sql = "select * from t_servicos where ser_status = 'A' order by ser_ordem";
+			$resultado = mysqli_query($mysqli, $sql);
+			$contador = 0; 
+			// SE O SERVIÇO DEVE SER INSERIDO NA PRIMEIRA POSIÇÃO ELE NÃO EXECUTA O WHILE, É PRIMORDIAL
+			if($ordem != 1){			
+				while($exibe = mysqli_fetch_assoc($resultado)){
+	        	 	if ($contador < $ordem && $contador!=$ordem) {
+	        	 		echo "<br> Ordem Menor - COD SERVICO -".$exibe['ser_codigo']." -  Ordem - ".$contador;
+	        			setOrdem($exibe['ser_codigo'],$contador);
+	        			$contador ++; 		
+	        	 	}
+	       		}
+	       	}
+       		setOrdem($cod_servico, $ordem-1);
+			ajustaOrdem();
+
 		}else{
 			echo "Erro de passagem de parametros";
 		}
@@ -85,11 +118,9 @@
 		/*
 			* recebe a descricao e o status, se status 
 		*/
-			require('../conecta_db.php');
+		require('../conecta_db.php');
 
 		$sql = "update t_servicos set ser_descricao = '".$descricao."' where ser_codigo = ".$ser_codigo;
-		echo "SQL:".$sql;
-		
 		$resultado = mysqli_query($mysqli, $sql); 
 		if($resultado){
 			return 1;
@@ -99,6 +130,52 @@
 
 	}
 
+	function setOrdem($ser_codigo, $ordem){
+		/* recebe  um serviços e  atualiza a ordem passada dele*/
+		
+		require('../conecta_db.php');
+		$sql = "update t_servicos set ser_ordem = ".$ordem." where ser_codigo = ".$ser_codigo;
+		echo "<br>".$sql;
+		$resultado = mysqli_query($mysqli,$sql);
+		if(!$resultado){
+			echo "<h1>ERRO NA ATUALIZAÇÃO NA ORDEM DO SERVIÇO kk".$ser_codigo."</h1><br>";
+		}
+	}
+	function getTotalServico(){
+		/* recebe  um serviços e  atualiza a ordem passada dele*/
+		require('../conecta_db.php');
+		$sql = "select count(ser_codigo) as total from t_servicos where ser_status = 'A'";
+		
+		$resultado = mysqli_query($mysqli,$sql);
+		if(!$resultado){
+			echo "<h1>ERRO NA ATUALIZAÇÃO NA ORDEM DO SERVIÇO".$ser_codigo."</h1><<br>";
+		}
+		while($exibe = mysqli_fetch_assoc($resultado)){
+        	 return $exibe['total'];
+        }
+	}
+	function ajustaOrdem(){
+		/*
+			* ajusta a ordem do menor para o maior
+			* tira os espaços em branco no meio
+		*/
+		require('../conecta_db.php');
+
+		$sql = "select * from t_servicos where ser_status = 'A' order by ser_ordem";
+
+		echo "<br>SQL _ (ajustaOrdem) -". $sql;
+		$resultado = mysqli_query($mysqli, $sql); 
+		//percorre  os  valores setados e  envia para a 
+		$aux = 1;
+		while($exibe = mysqli_fetch_assoc($resultado)){
+        	 
+        	 setOrdem($exibe['ser_codigo'], $aux);
+        	 $aux ++;
+        	 //echo "<br>AUX  = ".$aux;
+        }
+		
+
+	}
 	function getOrdem($servico){
 		/* se servico igual a zero então */
 		require('../conecta_db.php');

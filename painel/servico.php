@@ -13,8 +13,9 @@ if(isset($_GET['page'])){
 }
 ?>
 <div class="row">
-  <a class="waves-effect waves-light btn modal-trigger padrao-fundo" href="#modal1"><i class="material-icons large left">add</i>Cadastrar Serviço</a>
+  <a class="waves-effect waves-light btn modal-trigger green" href="#modal1"><i class="material-icons large left">add</i>Cadastrar Serviço</a>
   <a class="waves-effect waves-light btn modal-trigger red" href="?page=delete&p=Servicos"><i class="material-icons large left">delete_forever</i>Excluir Serviço</a>
+  <a class="waves-effect waves-light btn modal-trigger blue" href="?page=ordem&p=Ordem"><i class="material-icons large left">cached</i>Alterar Ordem Serviço</a>
 </div>
 
   <!-- Modal Structure -->

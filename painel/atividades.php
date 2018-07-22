@@ -1,6 +1,6 @@
-
-
 <?php
+
+
     // verifica se foi pasado por direcionamento correto 
 if(isset($_GET['page'])){
       //verifica se o direcionamento é mesmo para   serviços

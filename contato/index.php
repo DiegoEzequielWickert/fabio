@@ -33,7 +33,7 @@
                 Existem campos não preenchidos
                 <i class="close material-icons">close</i>
             </div>
-            <form class="col s12 l12" method="POST" action="verifica.php">
+            <form class="col s12 l8" method="POST" action="verifica.php">
                 <div>
                     <div class="input-field col l6">
                     <i class="material-icons prefix">account_circle</i>
