@@ -29,6 +29,7 @@
 			header('Location:index.php?page=atividades&p=Atividade&fail=true');
 		}
 	}
+
 	function excluir_atividade($cod_atividade){
 		require('../conecta_db.php');
 		$sql = "DELETE FROM `t_atividade` WHERE ati_codigo = ".$cod_atividade;
@@ -39,6 +40,20 @@
 			header('Location:index.php?page=delete&p=Atividades&sucess=true');
 		}else{
 			return 0;
+		}
+	}
+
+	function addCliente($descricao,$imagem, $site, $cidade){
+		require('../conecta_db.php');
+		$sql = "INSERT INTO t_clientes( cli_descricao, cli_status, cli_imagem, cli_site, cli_cidade) VALUES ('"
+		.$descricao."','A','".$imagem."','".$site."','".$cidade."')";
+		echo "SQL NEW:".$sql;
+		
+		$resultado = mysqli_query($mysqli, $sql); 
+		if($resultado){
+			//header('Location:index.php?page=Clientes&p=Cliente&sucess=true');
+		}else{
+			//header('Location:index.php?page=Clientes&p=Cliente&fail=true');
 		}
 	}
 
@@ -76,7 +91,8 @@
 			echo "<br> Entrou no Atividades, Enviando";
 			addAtividade($_POST['desc_atividade'],$_POST['option_atividade']);
 		
-
+		
+		
 		}else if(isset($_POST['btn_ordem'])){
 			/*
 				* RECEBEU UMA ATUALIZAÇÃO DE POSICAO
@@ -84,11 +100,11 @@
 				* BUSCA A  ORDEM QUE DESEJA  SER COLOCADO, SEMPRE VAI DIMINUIR UM NA ORDEM QUE DESEJA, PARA  COLOCAR ENTRE ELES
 				* NO FINAL AJUSTA A  ORDEM DE NOVO COMEÇANDO EM  1
 			*/
-			echo "<br> Entrou FUncçoes ORDEM";
+			
 			$cod_servico = $_POST['option_servico'];
 			$ordem = $_POST['option_ordem'];
 			ajustaOrdem();
-			echo "<br>VAMOS MEXER AGORA";
+			
 			//$total_servico = getTotalServico();
 			require('../conecta_db.php');
 			$sql = "select * from t_servicos where ser_status = 'A' order by ser_ordem";
@@ -97,8 +113,7 @@
 			// SE O SERVIÇO DEVE SER INSERIDO NA PRIMEIRA POSIÇÃO ELE NÃO EXECUTA O WHILE, É PRIMORDIAL
 			if($ordem != 1){			
 				while($exibe = mysqli_fetch_assoc($resultado)){
-	        	 	if ($contador < $ordem && $contador!=$ordem) {
-	        	 		echo "<br> Ordem Menor - COD SERVICO -".$exibe['ser_codigo']." -  Ordem - ".$contador;
+	        	 	if ($contador < $ordem && $contador!=$ordem) {	        	 		
 	        			setOrdem($exibe['ser_codigo'],$contador);
 	        			$contador ++; 		
 	        	 	}

@@ -30,8 +30,20 @@
 			
 			echo "<br>Atividade :".$descricao;
 
+		}else if(isset($_POST['btn_cliente'])){
+			// se exite um cadastro CLIENTE
+			require('funcoes.php');
+			echo "<br> Entrou no CLIENTE, Enviando";
+			
+			$descricao = $_POST['descricao_cliente'];
+			$imagem = "logo.jpg";
+			$site = $_POST['site_cliente'];
+			$cidade = $_POST['cidade_cliente'];
+
+			addCliente($descricao,$imagem, $site, $cidade);
+
 		}else{
-			echo "<h1> Caution, form not found!! -  Nivel de Submit</h1> ";
+			echo "<h1> Caution, form not found!! -  Nivel de Submit Page = Valida_servico.php</h1> ";
 		}
 
 	}else{
