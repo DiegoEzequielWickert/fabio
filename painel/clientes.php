@@ -11,8 +11,8 @@ if(isset($_GET['page'])){
     echo "<h5> Página Clientes</h5>";
   }
 
-}
-?>
+	}
+	?>
 <div class="row">
 	<span class="col l4 m12 s12">
 		<a class="waves-effect waves-light btn modal-trigger green" href="#modal1"><i class="material-icons large left">add</i>Cadastrar Clientes</a>		

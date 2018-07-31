@@ -16,11 +16,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <style type="text/css">
-    .cartao{
-      height: 160px !important;
-    }
-  </style>
+
 
 </head>
 
@@ -63,22 +59,22 @@
               //die (mysqli_error());
             echo "<p>Nenhum serviço cadastrado atéo momento!</p>";
           }
-          $conta = 1;
+          
           while($exibe = mysqli_fetch_assoc($resultado)){
             
-            echo '<div class="col s12 m12 l4 style="height:'.$tam.'px;">
+            echo '<div class="col s12 m12 l4 cartao">
                   <span class="badge red white-text left">Novo!!! </span>
                     <div class="card-panel section  center  "  >
-                      <img class="responsive-img cartao" src="logos/logo.jpg" "/>
-                        <h5>'.$conta.'-'.$exibe['cli_descricao'].'</h5>
-                        
+                      <img class="responsive-img " src="logos/'.$exibe['cli_imagem'].' "/>
+                        <h5>'.$exibe['cli_descricao'].'</h5>
+                        <span class="cidade">'.$exibe['cli_cidade'].'</span>
                         
                       ';
-                  $conta++;
+                  
             // consulta para  pegar as  ativides ATIVAS  
                         
             echo '<div>
-                    <a href="#" target="_blank"> Visite o Site</a>
+                    <a href="http://'.$exibe['cli_site'].'"" target="_blank"> Visite o Site</a>
                   </div>
                   </div>    
                 </div>';

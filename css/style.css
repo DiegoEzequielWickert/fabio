@@ -155,3 +155,11 @@ h4{
 .sucesso{
   font-size: 16pt !important ;
 }
+.cartao{
+      /*usado nos cartões de  vizualização*/
+      height: 550px !important;
+      /*width: 150px !important;*/
+}
+.cidade{
+  color:#CCCCCC !important;
+}

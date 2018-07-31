@@ -63,16 +63,20 @@
               // Consulta falhou, parar aqui 
               die(mysqli_error());
           }
-          $conta = 1;
+          $conta = 0;
           while($exibe = mysqli_fetch_assoc($resultado)){
-            
-            echo '<div class="col s12 m12 l6 style="height:'.$tam.'px;">
+                
+                if ($conta ==0) {
+                  echo '<div class="row">';
+                }
+            echo '<div class="col s12 m12 l6 ">
                   <span class="badge red white-text left">Novo!!!! </span>
                     <div class="card-panel section"  >
                       <h5>'.$conta.'-'.$exibe['ser_descricao'].'</h5>
                         <ul>
                       ';
-                  $conta++;
+                      
+                  
             // consulta para  pegar as  ativides ATIVAS  
             
             $sql2 = "select * from t_atividade where ser_codigo =".$exibe['ser_codigo']." and ati_status = 'A' ";
@@ -91,13 +95,22 @@
             echo ' </ul>
                   </div>    
                 </div>';
-            // if($aux == 0){
-            //   echo "</div>";
-            
-            // }
+            // fechamento da DIV que faz o row
+            $conta++;
+            if($conta == 3){
+              echo "</div>";
+              $conta = 0 ;
+            }
           }
+
+          // se no final rodou tudo e não fechou o row
+          if($conta != 0){
+              echo "</div>";
+              $conta = 0 ;
+            }
+
         ?> 
-                    
+           
       </div>
    </div>
    <div class="fixed-action-btn">
