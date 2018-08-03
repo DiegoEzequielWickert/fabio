@@ -1,6 +1,3 @@
-
-
-
 <?php
     // verifica se foi pasado por direcionamento correto 
 if(isset($_GET['page'])){
@@ -11,8 +8,8 @@ if(isset($_GET['page'])){
     echo "<h5> Página Clientes</h5>";
   }
 
-	}
-	?>
+}
+?>
 <div class="row">
 	<span class="col l4 m12 s12">
 		<a class="waves-effect waves-light btn modal-trigger green" href="#modal1"><i class="material-icons large left">add</i>Cadastrar Clientes</a>		
@@ -46,6 +43,15 @@ if(isset($_GET['page'])){
 	          <input id="cidade" name="cidade_cliente" type="text"  required="required" class="validate">
 	          <label for="novo">Cidade:</label>
 	        </div>
+          <div class="file-field input-field">
+            <div class="btn padrao-fundo">
+              <span class="small">Logo</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
 	        <div class="input-field col s12">          
 	          <i class="material-icons prefix">mode_edit</i>
 	          <input id="site" name="site_cliente" type="text" data-length="60" required="required" class="validate">
