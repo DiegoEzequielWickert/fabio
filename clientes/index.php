@@ -1,4 +1,4 @@
-<?php
+  <?php
     define('nivel',2); 
     // DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
     date_default_timezone_set('America/Sao_Paulo'); 
@@ -26,74 +26,53 @@
   <?php 
     require('../topo.php');
   ?>
-  <br>
-    <div class="container">
-      <h4>Veja alguns de nossos clientes:</h4>
-      
-      <br>
-      <div class="row">
+        <div class="parallax-container">
+            <div class="parallax">
+              <img  class ="responsive-img" src="clientes_fundo.png">
+            </div>
+        </div>
+    
+        <h4 align="center"> Confira alguns de nossos clientes:</h4>
+        <br>
+        <div class="row padrao2-fundo">
        <?php
-          //Pega o serviço com maior quantidade de serviços e define um tamanho do panel
-           
-          $sql = "SELECT COUNT(ser_codigo) as qtde FROM `t_atividade` GROUP BY ser_codigo";
-          $resultado = mysqli_query($mysqli, $sql); 
-          $tam = 0;
-          while($exibe = mysqli_fetch_assoc($resultado)){
-            $aux = $exibe['qtde'];          
-            if($tam == 0){
-              $tam = $exibe['qtde'];
-              
-            }else if($aux > $tam){
-              $tam = $aux;
-            } 
-           
-           }
-          $tamInicial = 10;
-          $tam = ($tam * 10)+ $tamInicial;
-          echo "<br> Tamanho Final -->".$tam."<br>";
+          
           $result = "select * from t_clientes where cli_status = 'A' order by cli_descricao";  
           $resultado = mysqli_query($mysqli, $result); 
-          $aux = 0;
           if(!$resultado) {
-              // Consulta falhou, parar aqui 
-              //die (mysqli_error());
-            echo "<p>Nenhum serviço cadastrado atéo momento!</p>";
+              //Consulta falhou, parar aqui 
+              echo "<p>Nenhum serviço cadastrado atéo momento!</p>";
+              die (mysqli_error());            
           }
-          
-          while($exibe = mysqli_fetch_assoc($resultado)){
-            
-            echo '<div class="col s12 m12 l4 cartao">
-                  <span class="badge red white-text left">Novo!!! </span>
-                    <div class="card-panel section  center  "  >
-                      <img class="responsive-img " src="logos/'.$exibe['cli_imagem'].' "/>
-                        <h5>'.$exibe['cli_descricao'].'</h5>
-                        <span class="cidade">'.$exibe['cli_cidade'].'</span>
-                        
-                      ';
-                  
-            // consulta para  pegar as  ativides ATIVAS  
-                        
-            echo '<div>
-                    <a href="http://'.$exibe['cli_site'].'"" target="_blank"> Visite o Site</a>
+          echo '<div class="container espaco_topo">';
+          while($exibe = mysqli_fetch_assoc($resultado)){            
+            echo '
+                  <div class="col s12 m12 l4 cartao_cliente">
+                    <span class="badge red white-text left">Novo!!! </span>
+                    <div class="card-panel section center">                      
+                      <img class="responsive-img logo_cliente pb" src="logos/'.$exibe['cli_imagem'].'"/>
+                      <a href="http://'.$exibe['cli_site'].'"" target="_blank">
+                      <br>
+                        <code class="nome center">'.$exibe['cli_descricao'].'</code>
+                      </a>
+                    </div>
                   </div>
-                  </div>    
-                </div>';
-            // if($aux == 0){
-            //   echo "</div>";
-            
-            // }
-          }
+                ';
+
+           }
+          echo '</div>';
+        echo '</div>';
         ?> 
-                    
-      </div>
-   </div>
+        
+        
+    
    <div class="fixed-action-btn">
   <a class="btn-floating btn-large padrao-fundo">
     <i class="large material-icons">mode_edit</i>
   </a>
   <ul>
     
-    <li><a href="../conato/" class="btn-floating blue"><i class="material-icons">chat</i></a></li>
+    <li><a href="../contato/" class="btn-floating blue"><i class="material-icons">chat</i></a></li>
   </ul>
 </div>
   
@@ -106,6 +85,22 @@
     $(document).ready(function(){
       $('.fixed-action-btn').floatingActionButton();
     });
+    $(document).ready(function(){
+      $('.carousel').carousel({
+        shift:80,
+        numVisible:20,
+        duration:400,
+        noWrap:true,
+        dist:70
+         
+      });
+    });
+   $('.proximo').click(function(){
+      $('.carousel').carousel('next');
+   });
+   $('.anterior').click(function(){
+      $('.carousel').carousel('prev');
+   });
       
   </script>
 

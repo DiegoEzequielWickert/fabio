@@ -64,7 +64,7 @@ require('../conecta_db.php');
       die(mysqli_error());
     }
     $conta = 0;
-    $hoje = date(Y,mm);
+    $hoje = date("Y-m-d");
     while($exibe = mysqli_fetch_assoc($resultado)){
 
       if ($conta ==0) {
@@ -73,15 +73,13 @@ require('../conecta_db.php');
       echo '<div class="col s12 m12 l6 ">';
       //verifica se o pode mostraro NOVO
       $dt_novo = $exibe['ser_novo'];
-      if(strtotime($dt_novo) >= strtotime($hoje) && $dt_novo != 'NULL'){
-        echo "DT NOVO: ".$dt_novo."- DT_HOJE".$hojes;
-      } 
+      // imprime a tag de novo 
       if($dt_novo >= $hoje && $dt_novo != 'NULL'){
         echo '<span class="badge red white-text left">Novo!!!! </span>';  
       }
             
-      echo '<div class="card-panel section"  >
-        <h5>'.$conta.'-'.$exibe['ser_descricao'].'</h5>
+      echo '<div class="card-panel"  >
+        <h5>'.$exibe['ser_descricao'].'</h5>
       <ul>
       ';
 

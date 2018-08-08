@@ -51,9 +51,9 @@
 		
 		$resultado = mysqli_query($mysqli, $sql); 
 		if($resultado){
-			//header('Location:index.php?page=Clientes&p=Cliente&sucess=true');
+			header('Location:index.php?page=clientes&p=Cliente&sucess=true');
 		}else{
-			//header('Location:index.php?page=Clientes&p=Cliente&fail=true');
+			header('Location:index.php?page=clientes&p=Cliente&fail=true');
 		}
 	}
 

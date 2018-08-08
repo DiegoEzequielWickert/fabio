@@ -1,8 +1,7 @@
 /* Custom Stylesheet */
 /**
  * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
+ * the core Materialize files in the future *
  * Made By MaterializeCSS.com
  */
 html{
@@ -90,12 +89,8 @@ footer.page-footer {
   margin-bottom: 160px;
 }
 
-.nav-telefone{
-  background-color:gray !important;
-  height:30px;
-  width: 100% !important;
-  font-size: 10pt;
-  font-family: 'Courier New', Courier, monospace;
+.navegacao{
+  height:20px !important;
 }
 
 .justificado{
@@ -157,9 +152,33 @@ h4{
 }
 .cartao{
       /*usado nos cartões de  vizualização*/
-      height: 600px !important;
-      /*width: 150px !important;*/
+      height: 150px !important;
+      width: 150px !important;
 }
 .cidade{
   color:#CCCCCC !important;
+}
+.logo_cliente{
+  height: 160px !important;
+}
+.cartao_cliente{
+  
+  width : 250px !important;
+  cursor : default
+}
+.nome{
+  font-size: 12pt !important;
+}
+.pb{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray; /* IE */
+}
+img:hover, .pb_reverse{
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  filter: none; /* IE */
+}
+.espaco_topo{
+  padding-top: 100px !important;
 }
