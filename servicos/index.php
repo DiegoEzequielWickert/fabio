@@ -47,47 +47,38 @@ require('../conecta_db.php');
       $aux = $exibe['qtde'];          
       if($tam == 0){
         $tam = $exibe['qtde'];
-
       }else if($aux > $tam){
         $tam = $aux;
-      } 
-
+      }
     }
-    $tamInicial = 10;
-    $tam = ($tam * 10)+ $tamInicial;
+    $tamInicial = 100;
+    $tam = ($tam * 30)+ $tamInicial;
     echo "<br> Tamanho Final -->".$tam."<br>";
     $result = "select * from t_servicos where ser_status = 'A' order by ser_ordem";  
     $resultado = mysqli_query($mysqli, $result); 
     $aux = 0;
-    if($resultado === FALSE) {
-              // Consulta falhou, parar aqui 
+    if($resultado === FALSE) { // Consulta falhou, parar aqui 
       die(mysqli_error());
     }
     $conta = 0;
     $hoje = date("Y-m-d");
     while($exibe = mysqli_fetch_assoc($resultado)){
-
-      if ($conta ==0) {
-        echo '<div class="row">';
-      }
-      echo '<div class="col s12 m12 l6 ">';
+      echo '<div class="col s12 m12 l6 aredondado" height="'.$tam.'">';
       //verifica se o pode mostraro NOVO
       $dt_novo = $exibe['ser_novo'];
       // imprime a tag de novo 
       if($dt_novo >= $hoje && $dt_novo != 'NULL'){
         echo '<span class="badge red white-text left">Novo!!!! </span>';  
       }
-            
-      echo '<div class="card-panel"  >
-        <h5>'.$exibe['ser_descricao'].'</h5>
-      <ul>
-      ';
+      echo '<div class="card-panel">
+        <h5 class="titulo">'.$exibe['ser_descricao'].'</h5>
+      <ul>';
 
       // consulta para  pegar as  ativides ATIVAS  
       $sql2 = "select * from t_atividade where ser_codigo =".$exibe['ser_codigo']." and ati_status = 'A' ";
       $resultado2 = mysqli_query($mysqli, $sql2); 
       if($resultado2 === FALSE) {
-              // Consulta falhou, parar aqui 
+        // Consulta falhou, parar aqui 
         die(mysqli_error());
       }  
       while($atividade = mysqli_fetch_assoc($resultado2)){
@@ -100,10 +91,10 @@ require('../conecta_db.php');
       echo ' </ul>
         </div>    
       </div>';
-            // fechamento da DIV que faz o row
+      // fechamento da DIV que faz o row
       $conta++;
       if($conta == 3){
-        echo "</div>";
+        //echo "</div>";
         $conta = 0 ;
       }
     }

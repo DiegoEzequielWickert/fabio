@@ -161,8 +161,7 @@ h4{
 .logo_cliente{
   height: 160px !important;
 }
-.cartao_cliente{
-  
+.cartao_cliente{  
   width : 250px !important;
   cursor : default
 }
@@ -181,4 +180,9 @@ img:hover, .pb_reverse{
 }
 .espaco_topo{
   padding-top: 100px !important;
+}
+.aredondado{
+  
+  border-radius: 0px 30px 0px 30px !important;
+
 }

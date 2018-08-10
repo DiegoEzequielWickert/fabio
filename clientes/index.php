@@ -46,15 +46,18 @@
           }
           echo '<div class="container espaco_topo">';
           while($exibe = mysqli_fetch_assoc($resultado)){            
+            if ($exibe['cli_imagem']!= NULL ) {
+              $imagem = $exibe['cli_imagem'];
+            }else{
+              $imagem = "logo.png";
+            }
             echo '
                   <div class="col s12 m12 l4 cartao_cliente">
                     <span class="badge red white-text left">Novo!!! </span>
-                    <div class="card-panel section center">                      
-                      <img class="responsive-img logo_cliente pb" src="logos/'.$exibe['cli_imagem'].'"/>
-                      <a href="http://'.$exibe['cli_site'].'"" target="_blank">
-                      <br>
-                        <code class="nome center">'.$exibe['cli_descricao'].'</code>
-                      </a>
+                    <div class="card-panel section center">               
+                    <a  class="tooltipped" data-position="center" data-tooltip="'.$exibe['cli_descricao'].'">       
+                      <img class="responsive-img logo_cliente pb" src="logos/'.$imagem.'"/>
+                    </a>
                     </div>
                   </div>
                 ';
@@ -68,6 +71,7 @@
     
    <div class="fixed-action-btn">
   <a class="btn-floating btn-large padrao-fundo">
+
     <i class="large material-icons">mode_edit</i>
   </a>
   <ul>
@@ -86,21 +90,9 @@
       $('.fixed-action-btn').floatingActionButton();
     });
     $(document).ready(function(){
-      $('.carousel').carousel({
-        shift:80,
-        numVisible:20,
-        duration:400,
-        noWrap:true,
-        dist:70
-         
-      });
-    });
-   $('.proximo').click(function(){
-      $('.carousel').carousel('next');
-   });
-   $('.anterior').click(function(){
-      $('.carousel').carousel('prev');
-   });
+    $('.tooltipped').tooltip();
+  });
+     
       
   </script>
 
