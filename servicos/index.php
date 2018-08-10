@@ -32,11 +32,11 @@ require('../conecta_db.php');
   require('../topo.php');
   ?>
   <br>
-  <div class="container">
+  <div class="row padrao2-fundo">
     <h4>Como a <code>Crescer</code> Pode Te Ajudar Hoje? </h4>
 
     <br>
-    <div class="row">
+    <div class="container">
      <?php
           //Pega o serviço com maior quantidade de serviços e define um tamanho do panel
 
@@ -63,14 +63,14 @@ require('../conecta_db.php');
     $conta = 0;
     $hoje = date("Y-m-d");
     while($exibe = mysqli_fetch_assoc($resultado)){
-      echo '<div class="col s12 m12 l6 aredondado" height="'.$tam.'">';
+      echo '<div class="col s12 m12 l6 ">';
       //verifica se o pode mostraro NOVO
       $dt_novo = $exibe['ser_novo'];
       // imprime a tag de novo 
       if($dt_novo >= $hoje && $dt_novo != 'NULL'){
         echo '<span class="badge red white-text left">Novo!!!! </span>';  
       }
-      echo '<div class="card-panel">
+      echo '<div class=" cartao_servico">
         <h5 class="titulo">'.$exibe['ser_descricao'].'</h5>
       <ul>';
 
@@ -93,11 +93,7 @@ require('../conecta_db.php');
       </div>';
       // fechamento da DIV que faz o row
       $conta++;
-      if($conta == 3){
-        //echo "</div>";
-        $conta = 0 ;
-      }
-    }
+   }
 
           // se no final rodou tudo e não fechou o row
     if($conta != 0){

@@ -51,11 +51,14 @@
             }else{
               $imagem = "logo.png";
             }
+            if ($exibe['cli_site'] != NULL) {
+              $site = 'htpp://'.$exibe['cli_site'].'" target="_blank"';
+            }else $site = '#';
             echo '
                   <div class="col s12 m12 l4 cartao_cliente">
                     <span class="badge red white-text left">Novo!!! </span>
                     <div class="card-panel section center">               
-                    <a  class="tooltipped" data-position="center" data-tooltip="'.$exibe['cli_descricao'].'">       
+                    <a class="tooltipped" href="'.$site.' data-position="center" data-tooltip="'.$exibe['cli_descricao'].'">       
                       <img class="responsive-img logo_cliente pb" src="logos/'.$imagem.'"/>
                     </a>
                     </div>
