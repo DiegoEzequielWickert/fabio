@@ -1,15 +1,16 @@
 <?php
     // verifica se foi pasado por direcionamento correto 
-if(isset($_GET['page'])){
-        //verifica se o direcionamento é mesmo para   serviços
-  if(!$_GET['page']=='representantes'){
-    header('Location:index.php?acess=danied-representantes');
-  }else{
-    echo "<h5> Página Representantes</h5>";
-  }
+  if(isset($_GET['page'])){
+    //verifica se o direcionamento é mesmo para   serviços
+    if(!$_GET['page']=='representantes'){
+      header('Location:index.php?acess=danied-representantes');
+    }else{
+      echo "<h5> Página Representantes</h5>";
+    }
 
-}
+  }
 ?>
+
 <div class="row">
 	<span class="col l4 m12 s12">
 		<a class="waves-effect waves-light btn modal-trigger green" href="#modal1"><i class="material-icons large left">add</i>Cadastro</a>		

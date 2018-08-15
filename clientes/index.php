@@ -1,8 +1,8 @@
-  <?php
-    define('nivel',2); 
-    // DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
-    date_default_timezone_set('America/Sao_Paulo'); 
-    require('../conecta_db.php');
+<?php
+  define('nivel',2); 
+  // DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
+  date_default_timezone_set('America/Sao_Paulo'); 
+  require('../conecta_db.php');
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,11 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
+  <style type="text/css">
+    .parallax-container {
+      height: 500px;
+    }
+  </style>
 
 </head>
 
@@ -28,13 +32,13 @@
   ?>
         <div class="parallax-container">
             <div class="parallax">
-              <img  class ="responsive-img" src="clientes_fundo.png">
+              <img  class ="responsive-img" src="fundo_02.png">
             </div>
         </div>
     
         <h4 align="center"> Confira alguns de nossos clientes:</h4>
         <br>
-        <div class="row padrao2-fundo">
+        <div class="row padrao2-fundo center">
        <?php
           
           $result = "select * from t_clientes where cli_status = 'A' order by cli_descricao";  

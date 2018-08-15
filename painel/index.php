@@ -46,7 +46,7 @@
       <div class="row"></div>
       <a href="?page=servicos" class="collection-item lista"><i class="material-icons left tiny ">work</i>Serviços</a>
       <a href="?page=atividades" class="collection-item lista"><i class="material-icons left tiny">work</i>Atividades</a>
-      <a href="?page=clientes" class="collection-item lista"><i class="material-icons left tiny">work</i>Clientes</a>
+      <a href="?page=clientes" class="collection-item lista"><i class="material-icons left tiny">face</i>Clientes</a>
       <a href="?page=representantes" class="collection-item lista"><i class="material-icons tiny left">work</i>Representantes</a>
       <a href="?page=cont_rec" class="collection-item lista"><i class="material-icons left tiny">mail</i>Contato Recebido</a>
       <a href="?page=mail_mark" class="collection-item lista"><i class="material-icons left tiny">mail</i>E-mail Markting</a>
