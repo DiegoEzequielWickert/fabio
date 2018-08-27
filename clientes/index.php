@@ -18,7 +18,7 @@
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style type="text/css">
     .parallax-container {
-      height: 500px;
+      height: 550px;
     }
   </style>
 
@@ -36,9 +36,10 @@
             </div>
         </div>
     
-        <h4 align="center"> Confira alguns de nossos clientes:</h4>
-        <br>
-        <div class="row padrao2-fundo center">
+        
+        
+      <div class="row center">
+        <h3 align="padrao espaco_topo"> Confira alguns de nossos clientes:</h3>
        <?php
           
           $result = "select * from t_clientes where cli_status = 'A' order by cli_descricao";  
@@ -48,7 +49,7 @@
               echo "<p>Nenhum serviço cadastrado atéo momento!</p>";
               die (mysqli_error());            
           }
-          echo '<div class="container espaco_topo">';
+          echo '<div class="container">';
           while($exibe = mysqli_fetch_assoc($resultado)){            
             if ($exibe['cli_imagem']!= NULL ) {
               $imagem = $exibe['cli_imagem'];
@@ -59,7 +60,7 @@
               $site = 'htpp://'.$exibe['cli_site'].'" target="_blank"';
             }else $site = '#';
             echo '
-                  <div class="col s12 m12 l4 cartao_cliente">
+                  <div class="col s12 m12  cartao_cliente">
                     <span class="badge red white-text left">Novo!!! </span>
                     <div class="card-panel section center">               
                     <a class="tooltipped" href="'.$site.' data-position="center" data-tooltip="'.$exibe['cli_descricao'].'">       

@@ -16,12 +16,14 @@ require('../conecta_db.php');
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <style>
-  .titulo{
-    text-align:left;
-  }
-
-</style>
+  <style type="text/css">
+    .titulo{
+      text-align:left;
+    }
+    .parallax-container {
+      height: 550px;
+    }
+  </style>
 
 </head>
 
@@ -31,9 +33,14 @@ require('../conecta_db.php');
   <?php 
   require('../topo.php');
   ?>
+  <div class="parallax-container">
+      <div class="parallax">
+            <img src="fundo_02.png">
+        </div>
+    </div>
   <br>
-  <div class="row padrao2-fundo">
-    <h4>Como a <code>Crescer</code> Pode Te Ajudar Hoje? </h4>
+  <div class="row padrao2-fundo espaco_topo">
+    <h4 class="center">Como a <code>Crescer</code> Pode Te Ajudar Hoje? </h4>
 
     <br>
     <div class="container">
@@ -46,7 +53,7 @@ require('../conecta_db.php');
      while($exibe = mysqli_fetch_assoc($resultado)){
       $aux = $exibe['qtde'];          
       if($tam == 0){
-        $tam = $exibe['qtde'];
+        $tam = $exibe ['qtde'];
       }else if($aux > $tam){
         $tam = $aux;
       }
@@ -63,7 +70,7 @@ require('../conecta_db.php');
     $conta = 0;
     $hoje = date("Y-m-d");
     while($exibe = mysqli_fetch_assoc($resultado)){
-      echo '<div class="col s12 m12 l6 ">';
+      echo '<div class="col s12 m12 l4 ">';
       //verifica se o pode mostraro NOVO
       $dt_novo = $exibe['ser_novo'];
       // imprime a tag de novo 
@@ -80,7 +87,7 @@ require('../conecta_db.php');
       if($resultado2 === FALSE) {
         // Consulta falhou, parar aqui 
         die(mysqli_error());
-      }  
+      }       
       while($atividade = mysqli_fetch_assoc($resultado2)){
         if (!$atividade) {
           echo "<li align='left'> Nenhuma atividade Cadastrada </li>";

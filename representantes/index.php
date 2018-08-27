@@ -18,7 +18,7 @@
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style type="text/css">
     .parallax-container {
-      height:550px;
+      height:600px;
     }
   </style>
 
@@ -35,11 +35,8 @@
               <img  class ="responsive-img" src="fundo.jpg">
             </div>
         </div>
-
-    
-        <h4 align="center">Conheça a nossa rede de Representantes:</h4>
-        <br>
-        <div class="row padrao2-fundo">
+        <div class="row padrao2-fundo center">
+          <h4 align="  espaco_topo">Conheça a nossa rede de Representantes:</h4>
        <?php
           
           $result = "select * from t_representantes where rep_status = 'A' order by rep_cidade";  

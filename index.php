@@ -16,7 +16,9 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style type="text/css">
-    
+    .padrao_letra{
+      color: #176EAC; 
+    }
     
   </style>
 
@@ -40,7 +42,7 @@
               <hr></hr>
             </div>
             
-            <div class="row padrao crc">
+            <div class="row padrao_letra crc">
               <h5>CRC: 1-SC-036196-O-2</h5>
               <code class="padrao crc"> Telefone: (49) 9.8433-7227</code>
               <h5 class="padrao crc">E-mail: crescercontabilidade@hotmail.com</h5>
@@ -61,7 +63,7 @@
     <div  class="section" >
       <div class="row">
         <div class="col l12 m12 s12 x12">
-          <h3 class="center-align">A Crescer...</h3>
+          <h3 class="center-align padrao">A Crescer...</h3>
           <p></p>
           <div class="container justificado">
           <img src="img/logo1.png" class="responsive-img r_image"  align='right' alt="" style="display:float;">
@@ -74,19 +76,19 @@
           <p></p>
           <div class="container">
             <div class="col l10 justificado">
-              <h5>Nossa Missão</h5>
+              <h5 class="padrao">Nossa Missão</h5>
               <p>Assessorar e executar tecnicamente as informações para tomada de decisões e crescimento dos clientes, prestando serviços com qualidade e competência, buscando a total satisfação dos nossos clientes, funcionários, fornecedores e comunidade com responsabilidade e respeito.</p>
               <br><br>
             </div>
             <p></p>
             <div class="col l10 justificado ">
-              <h5>Nossa Vissão</h5>
+              <h5 class="padrao">Nossa Vissão</h5>
               <p>Ser uma empresa modelo com excelência no segmento contábil, buscando inovações tecnológicas, objetivando a otimização de tempo, redução de custos, lucratividade e solidez constante no mercado.</p>
             <br><br>
             </div>
             <p></p>
             <div class="col l10 justificado">
-              <h5>Valores</h5>
+              <h5 class="padrao">Valores</h5>
               <ul>
                 <li><i class="material-icons tiny">check</i> Foco no Crescimento do Cliente </li>
                 <li><i class="material-icons tiny">check</i> Integridade, Ética e Transparência</li>
@@ -98,7 +100,7 @@
             <br><br>
             </div>
             <div class="col 10 justificado">
-              <h5>Slogan</h5>
+              <h5 class="padrao">Slogan</h5>
               <p>Acrescentar Conquistas, Somar Conhecimento e Adicionar Satisfação</p>
             </div>  
           </div>

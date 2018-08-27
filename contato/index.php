@@ -15,6 +15,12 @@
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script src='https://www.google.com/recaptcha/api.js'></script>
+    <style type="text/css">
+        .parallax-container {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
 </head>
 
 
@@ -22,41 +28,47 @@
     <?php 
         include('../topo.php');
     ?>
-    <div class="container">
-        <h4>Contato</h4>
+
+    <div class="parallax-container">
+      <div class="parallax">
+            <img src="fundo.jpg">
+        </div>
+    </div>
+    <div class="container center">
+        <h3 class="padrao">Contato</h3>
             <p>
             Deixe aqui seu contato, teremos  o prazer de retornar assim que possivel.
             </p>
 
-        <div class="row">
+        <div class="row ">
             <div class="chip padrao">
-                Existem campos não preenchidos
+                Existem campos de preenchimento obrigatório.
                 <i class="close material-icons">close</i>
             </div>
             <form class="col s12 l8" method="POST" action="verifica.php">
                 <div>
-                    <div class="input-field col l6">
+                    <div class="input-field col l8">
                     <i class="material-icons prefix">account_circle</i>
                     <input placeholder="Nome Completo" id="nome1" name="nome" type="text" class="validate formulario" validate="validate" required="required">
                     <label for="nome1">Nome Completo</label>
                     </div>
                 </div>
                 <div>
-                    <div class="input-field col l6">
+                    <div class="input-field col l8">
                     <i class="material-icons prefix">mail</i>
                     <input placeholder="E-mail" name="mail"  type="email" class="validate formulario" required="required">
                     <label for="mail">E-mail</label>
                     </div>
                 </div>
                 <div>
-                    <div class="input-field col l6">
+                    <div class="input-field col l8">
                         <i class="material-icons prefix">phone</i>
                         <input name="telefone" id="telefone1" type="number" data-length="11" class="validate" required="required">
                         <label for="telefone1">Telefone</label>
                     </div>
                 </div>
                 <div>
-                    <div class="input-field col l6">
+                    <div class="input-field col l8">
                         <i class="material-icons prefix">location_on</i>
                         <input placeholder="Sua Cidade" name="cidade" type="text" class="validate formulario" required="required">
                         <label for="cidade">Cidade</label>
