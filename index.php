@@ -19,7 +19,12 @@
     .padrao_letra{
       color: #176EAC; 
     }
-    
+    #mail_longo{
+      font-size: 14pt !important;
+    }
+    .centralizado{
+      align-items: center;
+    }
   </style>
 
 </head>
@@ -43,14 +48,16 @@
             </div>
             
             <div class="row padrao_letra crc">
-              <h5>CRC: 1-SC-036196-O-2</h5>
-              <code class="padrao crc"> Telefone: (49) 9.8433-7227</code>
-              <h5 class="padrao crc">E-mail: crescercontabilidade@hotmail.com</h5>
-              
-              <div class="row"></div>
-              <div class="col m12 l12">
+              <h5>CRC: 1-SC-009134-O-2</h5>
+              <h5 class="padrao"> Telefone: (49) 9.8433-7227</h5>
+              <a href="mailto:fabiocarlosh@hotmail.com">
+                <h5 class="padrao">fabiocarlosh@hotmail.com</h5>
+              </a>
+              <div class="row "></div>
+              <div class="col m12 l12 ">
                 
-              <a  href="#sobre" class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
+              <a  href="#sobre" class="btn-floating pulse padrao-fundo centralizado">
+                <i class="material-icons ">keyboard_arrow_down</i></a>
               </div>
             </div>
         </div>
@@ -73,20 +80,20 @@
 
           </div>
           
-          <p></p>
+          
           <div class="container">
             <div class="col l10 justificado">
               <h5 class="padrao">Nossa Missão</h5>
               <p>Assessorar e executar tecnicamente as informações para tomada de decisões e crescimento dos clientes, prestando serviços com qualidade e competência, buscando a total satisfação dos nossos clientes, funcionários, fornecedores e comunidade com responsabilidade e respeito.</p>
-              <br><br>
+            
             </div>
-            <p></p>
+            
             <div class="col l10 justificado ">
               <h5 class="padrao">Nossa Vissão</h5>
               <p>Ser uma empresa modelo com excelência no segmento contábil, buscando inovações tecnológicas, objetivando a otimização de tempo, redução de custos, lucratividade e solidez constante no mercado.</p>
-            <br><br>
+           
             </div>
-            <p></p>
+             
             <div class="col l10 justificado">
               <h5 class="padrao">Valores</h5>
               <ul>
@@ -96,8 +103,7 @@
                 <li><i class="material-icons tiny">check</i> Profissionalismo</li>
                 <li><i class="material-icons tiny">check</i> Qualidade e Melhoria Contínua</li> 
               </ul>
-              
-            <br><br>
+               
             </div>
             <div class="col 10 justificado">
               <h5 class="padrao">Slogan</h5>

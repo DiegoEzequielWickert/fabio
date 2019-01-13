@@ -17,21 +17,27 @@
       <div class="row">
         <div class="col l6 s12 ">
           <h5 class="white-text">Contatos</h5>
-          <p class="grey-text text-lighten-4"> 
-            Texto Simples
-          </p>
+          <a href="contato/">
+            <p class="padrao text-lighten-4"> 
+              <i class="material-icons">email</i>
+               Sinta-se a vontade para entrar em contato.
+              <br>Clique aqui.
+              
+              </p>
+          </a>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Mais Links</h5>
+          <h5 class="white-text">Outras Páginas</h5>
+
           <ul>
             
             <li><a class="white-text" href="#!"></a></li>
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Link Úteis</h5>
+          <h5 class="white-text">Mapa do Site</h5>
           <ul>
           
             <li><a class="white-text uteis" href="#">A Crescer</a></li>

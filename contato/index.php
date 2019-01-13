@@ -17,9 +17,14 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
     <style type="text/css">
         .parallax-container {
-            height: 500px;
-            width: 100%;
-        }
+      height: 350px;
+    }
+    .fonte{
+      font-size: 70pt;
+      margin-top: -100px;
+      display: block;
+      font-weight: 100 !important;
+    }
     </style>
 </head>
 
@@ -34,8 +39,14 @@
             <img src="fundo.jpg">
         </div>
     </div>
-    <div class="container center">
-        <h3 class="padrao">Contato</h3>
+<span class=" fonte padrao center espaco_topo">Contato</span>
+  <div class="col m12 l12 center">          
+    <a  href="#sobre" class="btn-floating pulse padrao-fundo">
+      <i class="material-icons center ">keyboard_arrow_down</i>
+    </a>
+  </div>
+
+    <div class="container center"> 
             <p>
             Deixe aqui seu contato, teremos  o prazer de retornar assim que possivel.
             </p>
@@ -103,7 +114,9 @@
         </div>
 
         <div>
-           <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5638.944364173496!2d-53.00848571479194!3d-27.083484075619488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1527050364105"  frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.3096923413614!2d-53.01116918495146!3d-27.083529383054316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fb3fac85591a13%3A0x8f7ad58d24f9363a!2sCrescer+Contabilidade+e+Consultoria!5e0!3m2!1spt-BR!2sbr!4v1538785402845" width="800" height="600" frameborder="0" style="border:0" allowfullscreen>
+            
+          </iframe>
        </div>
        
 

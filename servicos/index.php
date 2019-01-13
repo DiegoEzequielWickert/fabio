@@ -1,8 +1,13 @@
 <?php
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
+
 define('nivel',2); 
     // DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
 date_default_timezone_set('America/Sao_Paulo'); 
 require('../conecta_db.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +26,13 @@ require('../conecta_db.php');
       text-align:left;
     }
     .parallax-container {
-      height: 550px;
+      height: 350px;
+    }
+    .fonte{
+      font-size: 70pt;
+      margin-top: -100px;
+      display: block;
+      font-weight: 150;
     }
   </style>
 
@@ -34,43 +45,37 @@ require('../conecta_db.php');
   require('../topo.php');
   ?>
   <div class="parallax-container">
-      <div class="parallax">
-            <img src="fundo_02.png">
-        </div>
+    <div class="parallax">
+      <img src="azul_01.png">
     </div>
-  <br>
+    
+  </div>
+  
+  <!-- <div class="col m12 l12 center">          
+      <a  href="#sobre" class="btn-floating pulse padrao-fundo">
+        <i class="material-icons center ">keyboard_arrow_down</i>
+      </a>
+  </div> -->
+  
+  
   <div class="row padrao2-fundo espaco_topo">
-    <h4 class="center">Como a <code>Crescer</code> Pode Te Ajudar Hoje? </h4>
+    <h3 class="center-align padrao"> Serviços </h3>
+    <br>  
+    <h5 class="center padrao">Como a <code>Crescer</code> Pode Te Ajudar Hoje? </h5>
 
     <br>
-    <div class="container">
-     <?php
-          //Pega o serviço com maior quantidade de serviços e define um tamanho do panel
 
-     $sql = "SELECT COUNT(ser_codigo) as qtde FROM `t_atividade` GROUP BY ser_codigo";
-     $resultado = mysqli_query($mysqli, $sql); 
-     $tam = 0;
-     while($exibe = mysqli_fetch_assoc($resultado)){
-      $aux = $exibe['qtde'];          
-      if($tam == 0){
-        $tam = $exibe ['qtde'];
-      }else if($aux > $tam){
-        $tam = $aux;
-      }
-    }
-    $tamInicial = 100;
-    $tam = ($tam * 30)+ $tamInicial;
-    echo "<br> Tamanho Final -->".$tam."<br>";
-    $result = "select * from t_servicos where ser_status = 'A' order by ser_ordem";  
-    $resultado = mysqli_query($mysqli, $result); 
-    $aux = 0;
-    if($resultado === FALSE) { // Consulta falhou, parar aqui 
-      die(mysqli_error());
-    }
+    <div class="container">
+     <?php     
+  
     $conta = 0;
     $hoje = date("Y-m-d");
+    $result = "select * from t_servicos where ser_status = 'A' order by ser_ordem";  
+    $resultado = mysqli_query($mysqli, $result); 
+
     while($exibe = mysqli_fetch_assoc($resultado)){
       echo '<div class="col s12 m12 l4 ">';
+      
       //verifica se o pode mostraro NOVO
       $dt_novo = $exibe['ser_novo'];
       // imprime a tag de novo 
@@ -131,7 +136,9 @@ require('../footer.php');
   $(document).ready(function(){
     $('.fixed-action-btn').floatingActionButton();
   });
-
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
 </script>
 
 </body>

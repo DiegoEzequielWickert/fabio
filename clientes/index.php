@@ -18,7 +18,13 @@
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style type="text/css">
     .parallax-container {
-      height: 550px;
+      height: 350px;
+    }
+    .fonte{
+      font-size: 70pt;
+      margin-top: -100px;
+      display: block;
+      font-weight: 100 !important;
     }
   </style>
 
@@ -32,24 +38,29 @@
   ?>
         <div class="parallax-container">
             <div class="parallax">
-              <img  class ="responsive-img" src="fundo_02.png">
+              <img  class ="responsive-img" src="cli_01.png">
             </div>
         </div>
     
-        
+        <div class="col m12 l12 center espaco_topo">    
+          <h3 class="center-align padrao"> Clientes </h3>      
+            
+          <a  href="#sobre" class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
+        </div>
         
       <div class="row center">
-        <h3 align="padrao espaco_topo"> Confira alguns de nossos clientes:</h3>
+        <h5 align="padrao espaco_topo"> Confira alguns de nossos clientes:</h5>
+        <br>
        <?php
           
           $result = "select * from t_clientes where cli_status = 'A' order by cli_descricao";  
           $resultado = mysqli_query($mysqli, $result); 
           if(!$resultado) {
               //Consulta falhou, parar aqui 
-              echo "<p>Nenhum serviço cadastrado atéo momento!</p>";
+              echo "<p>Nenhum serviço cadastrado até o momento!</p>";
               die (mysqli_error());            
           }
-          echo '<div class="container">';
+          echo '<div class="container center">';
           while($exibe = mysqli_fetch_assoc($resultado)){            
             if ($exibe['cli_imagem']!= NULL ) {
               $imagem = $exibe['cli_imagem'];
@@ -60,9 +71,9 @@
               $site = 'htpp://'.$exibe['cli_site'].'" target="_blank"';
             }else $site = '#';
             echo '
-                  <div class="col s12 m12  cartao_cliente">
-                    <span class="badge red white-text left">Novo!!! </span>
-                    <div class="card-panel section center">               
+                  <div class="col s12 m12  cartao_cliente">';
+                    //<span class="badge red white-text left">Novo!!! </span>
+                    echo '<div class="card-panel section center">               
                     <a class="tooltipped" href="'.$site.' data-position="center" data-tooltip="'.$exibe['cli_descricao'].'">       
                       <img class="responsive-img logo_cliente pb" src="logos/'.$imagem.'"/>
                     </a>

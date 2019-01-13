@@ -16,10 +16,10 @@
 		<a class="waves-effect waves-light btn modal-trigger green" href="#modal1"><i class="material-icons large left">add</i>Cadastro</a>		
 	</span>
  <span class="col l4 m12 s12">
-  <a class="waves-effect waves-light btn modal-trigger blue " href="?page=edit&p=Clientes"><i class="material-icons large left">cached</i>Alterar</a>		
+  <a class="waves-effect waves-light btn modal-trigger blue " href="?page=edit&p=Representantes"><i class="material-icons large left">cached</i>Alterar</a>		
 </span>
 <span class="col l4 m12 s12">
-  <a class="waves-effect waves-light btn modal-trigger red" href="?page=delete&p=Clientes"><i class="material-icons large left">delete_forever</i>Excluir</a>    
+  <a class="waves-effect waves-light btn modal-trigger red" href="?page=delete&p=Representantes"><i class="material-icons large left">delete_forever</i>Excluir</a>    
 </span>
 
 </div>
@@ -34,23 +34,23 @@
         <form action="valida_servico.php" method="POST">
          <div class="input-field col s12">          
            <i class="material-icons prefix">mode_edit</i>
-           <input id="novo" name="descricao_cliente" type="text" data-length="60" required="required" class="validate">
+           <input id="novo" name="descricao_representante" type="text" data-length="60" required="required" class="validate">
            <label for="novo">Descrição Representante</label>
          </div>	        
          <div class="input-field col m12 l8">
            <i class="material-icons prefix">fiber_new</i>
-           <input id="cidade" name="cidade_cliente" type="text"  required="required" class="validate">
+           <input id="cidade" name="cidade_representante" type="text"  required="required" class="validate">
            <label for="novo">Cidade:</label>
          </div>
          <div class="input-field col s4">
            <i class="material-icons prefix">phone</i>
-           <input id="telefone" name="telefone" type="text"  required="required" class="validate">
+           <input id="telefone" name="telefone_representante" type="text"  required="required" class="validate">
            <label for="telefone">Telefone:</label>
          </div>
          <div class="input-field col s12">          
            <i class="material-icons prefix">mode_edit</i>
-           <input id="site" name="site_cliente" type="text" data-length="60" required="required" class="validate">
-           <label for="site">Site Cliente, SEM HTTP ou HTTPS:</label>
+           <input id="site" name="site_representante" type="text" data-length="60" required="required" class="validate">
+           <label for="site">Site Representante, SEM HTTP ou HTTPS:</label>
          </div>
        </div>
 
@@ -66,40 +66,40 @@
   <table class="responsive-table highlight striped">
     <thead>
       <tr>
-        <th>Código</th>
         <th>Descrição</th>
-        <th>Cidade</th>
-        <th>Status</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
         <th>Imagem</th>
-        <th>Site</th>
-        
+        <th>Endereco</th>
+        <th>Cidade</th>
 
       </tr>
     </thead>
     <tbody>
       <?php 
       require('../conecta_db.php');
-      $result = "SELECT* FROM t_clientes WHERE cli_status = 'A' order by cli_descricao";  
+      $result = "SELECT* FROM t_representantes WHERE rep_status = 'A' order by rep_descricao";  
       $resultado = mysqli_query($mysqli, $result); 
       $aux = 0;
       while($exibe = mysqli_fetch_assoc($resultado)){
         //se o status for I ele  seta a classe para  ficar  vermelho  
-        if($exibe['cli_status']=='I'){
+        if($exibe['rep_status']=='I'){
           $efeito = ' class="inativo" ';
-          $exibe['cli_status'] = "Inativo";
+          $exibe['rep_status'] = "Inativo";
         }else{
           // se o status  for A ele mantem sem nada a classe
           $efeito = " ";                
-          $exibe['cli_status'] = "Ativo";
+          $exibe['rep_status'] = "Ativo";
         }
         echo"
         <tr>
-        <td".$efeito.">".$exibe['cli_codigo']." </td>
-        <td".$efeito.">".$exibe['cli_descricao']."</td>
-        <td".$efeito.">".$exibe['cli_cidade']."</td>
-        <td".$efeito.">".$exibe['cli_status']."</td>
-        <td".$efeito.">".$exibe['cli_imagem']."</td>
-        <td".$efeito.">".$exibe['cli_site']."</td>
+        <td".$efeito.">".$exibe['rep_descricao']."</td>
+        <td".$efeito.">".$exibe['rep_telefone']."</td>
+        <td".$efeito.">".$exibe['rep_email']."</td>
+        <td".$efeito.">".$exibe['rep_status']."</td>
+        <td".$efeito.">".$exibe['rep_logo']."</td>
+        <td".$efeito.">".$exibe['rep_endereco']."</td>
+        <td".$efeito.">".$exibe['rep_cidade']."</td>
         
         
         </tr>";
