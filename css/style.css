@@ -188,3 +188,10 @@ img:hover, .pb_reverse{
 .cartao_servico{
   height:200px !important; 
 }
+h5{
+  font-size: 13pt;
+}
+td{
+  line-height: 4px;
+  height: 5px;
+}

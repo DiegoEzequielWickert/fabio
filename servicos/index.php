@@ -22,19 +22,27 @@ require('../conecta_db.php');
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style type="text/css">
-    .titulo{
-      text-align:left;
-    }
-    .parallax-container {
-      height: 350px;
-    }
-    .fonte{
-      font-size: 70pt;
-      margin-top: -100px;
-      display: block;
-      font-weight: 150;
-    }
-  </style>
+  .titulo{
+    text-align:left;
+  }
+  .parallax-container {
+    height: 350px;
+  }
+  .fonte{
+    font-size: 70pt;
+    margin-top: -100px;
+    display: block;
+    font-weight: 150;
+  }
+  .margem2{
+    margin:50px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+  .tab{
+    padding-left: 20px;
+  }
+</style>
 
 </head>
 
@@ -51,29 +59,23 @@ require('../conecta_db.php');
     
   </div>
   
-  <!-- <div class="col m12 l12 center">          
-      <a  href="#sobre" class="btn-floating pulse padrao-fundo">
-        <i class="material-icons center ">keyboard_arrow_down</i>
-      </a>
-  </div> -->
-  
-  
-  <div class="row padrao2-fundo espaco_topo">
-    <h3 class="center-align padrao"> Serviços </h3>
+  <div class="row padrao2-fundo margem2 ">
+    <h3 class="center-align padrao "> Serviços </h3>
     <br>  
-    <h5 class="center padrao">Como a <code>Crescer</code> Pode Te Ajudar Hoje? </h5>
+    <h5 class="center">Como a <code>Crescer</code> Pode Te Ajudar Hoje? </h5>
 
-    <br>
+    <br> <br>
+
 
     <div class="container">
      <?php     
-  
-    $conta = 0;
-    $hoje = date("Y-m-d");
-    $result = "select * from t_servicos where ser_status = 'A' order by ser_ordem";  
-    $resultado = mysqli_query($mysqli, $result); 
+     
+     $conta = 0;
+     $hoje = date("Y-m-d");
+     $result = "select * from t_servicos where ser_status = 'A' order by ser_ordem";  
+     $resultado = mysqli_query($mysqli, $result); 
 
-    while($exibe = mysqli_fetch_assoc($resultado)){
+     while($exibe = mysqli_fetch_assoc($resultado)){
       echo '<div class="col s12 m12 l4 ">';
       
       //verifica se o pode mostraro NOVO
@@ -83,8 +85,15 @@ require('../conecta_db.php');
         echo '<span class="badge red white-text left">Novo!!!! </span>';  
       }
       echo '<div class=" cartao_servico">
-        <h5 class="titulo">'.$exibe['ser_descricao'].'</h5>
-      <ul>';
+      <table  class="table highlight">
+      
+      <tr>
+      <thead align="center"> 
+      <h5 class="titulo padrao ">'.$exibe['ser_descricao'].'</h5>
+      
+      </thead>
+      </tr>
+      ';
 
       // consulta para  pegar as  ativides ATIVAS  
       $sql2 = "select * from t_atividade where ser_codigo =".$exibe['ser_codigo']." and ati_status = 'A' ";
@@ -95,17 +104,20 @@ require('../conecta_db.php');
       }       
       while($atividade = mysqli_fetch_assoc($resultado2)){
         if (!$atividade) {
-          echo "<li align='left'> Nenhuma atividade Cadastrada </li>";
+          echo "<li align='left' > Nenhuma atividade Cadastrada </li>";
         }else{
-          echo "<li> - ".$atividade['ati_descricao']." </li>";
+          echo "
+          <tr>
+          <td class='tab'>".$atividade['ati_descricao']." </li></td>
+          </tr>";
         }
       }                 
-      echo ' </ul>
-        </div>    
+      echo ' </table>
+      </div>    
       </div>';
       // fechamento da DIV que faz o row
       $conta++;
-   }
+    }
 
           // se no final rodou tudo e não fechou o row
     if($conta != 0){
@@ -114,7 +126,7 @@ require('../conecta_db.php');
     }
 
     ?> 
-
+    
   </div>
 </div>
 <div class="fixed-action-btn">

@@ -39,7 +39,7 @@
             <img src="fundo.jpg">
         </div>
     </div>
-<span class=" fonte padrao center espaco_topo">Contato</span>
+  <h3 class="center-align padrao "> Contato </h3>
   <div class="col m12 l12 center">          
     <a  href="#sobre" class="btn-floating pulse padrao-fundo">
       <i class="material-icons center ">keyboard_arrow_down</i>
