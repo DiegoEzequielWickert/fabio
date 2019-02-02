@@ -1,11 +1,11 @@
 <?php
-
+  
 
     // verifica se foi pasado por direcionamento correto 
 if(isset($_GET['page'])){
       //verifica se o direcionamento é mesmo para   serviços
-  if(!$_GET['page']== 'servicos'){
-    header('Location:index.php?acess=danied-servicos');
+  if(!$_GET['page']== 'atividades'){
+    header('Location:index.php?acess=danied-atividades');
   }else{
     echo "<h5> Página de Atividades</h5>";
   }
@@ -40,7 +40,7 @@ if(isset($_GET['page'])){
     <div class="modal-content">
       <h4>Cadastro de  Serviços</h4>
       <div class="row">
-        <p class ="justificado" >Use este campo para cadastrar um novo atividades. Depois disso você precisa vincular atividades com algum serviço. Por padrão em um novo cadastro o serviços já aparece com ativo. Sobre a ordem vai cadastrar no FIM DA FILA. Deve ser ajustado a ordem caso queira posteriormente.</p>
+        <p class ="justificado" >Use este campo para cadastrar uma nova atividade. Você precisa vincular atividades com algum serviço. Por padrão em um novo cadastro o serviços já aparece com ativo. Sobre a ordem vai cadastrar no FIM DA FILA. Deve ser ajustado a ordem caso queira posteriormente.</p>
         <code class="red-text">CARACTERES INVÀLIDOS: @ # $ % & ! " ' ? </code>
         <form action="valida_servico.php" method="POST">
           <div class="input-field col s12">          
@@ -48,10 +48,10 @@ if(isset($_GET['page'])){
                 <option   disabled selected>Selecione um serviço</option>
                 <?php 
                   require ('../conecta_db.php');
-                  $sql = "select * from t_servicos where ser_status = 'A'";                  
+                  $sql = "select * from t_servicos where ser_status = 'A' order by ser_ordem";                  
                   $resultado = mysqli_query($mysqli, $sql);            
                   while ($exibe = mysqli_fetch_assoc($resultado)) {
-                    echo "<option value='".$exibe['ser_codigo']."'>".$exibe['ser_codigo']." - ".$exibe['ser_descricao']."</option>";
+                    echo "<option value='".$exibe['ser_codigo']."'>".$exibe['ser_ordem']." - ".$exibe['ser_descricao']."</option>";
                    }
                 ?>
               </select>
@@ -87,8 +87,8 @@ Serviços não Vinculados: ### (Qtde)
     </thead>
     <tbody>
       <?php 
-      require('../conecta_db.php');
-      $result = "select ati_descricao, ser_descricao,ati_status,ati_datacadastro from t_atividade as atividade join t_servicos as servico on servico.ser_codigo = atividade.ser_codigo order by servico.ser_descricao ASC, atividade.ati_descricao ASC";  
+    
+      $result = "select ati_descricao, ati_codigo, ser_descricao,ati_status,ati_datacadastro from t_atividade as atividade join t_servicos as servico on servico.ser_codigo = atividade.ser_codigo order by servico.ser_descricao ASC, atividade.ati_descricao ASC";  
       $resultado = mysqli_query($mysqli, $result); 
       $aux = 0;
       while($exibe = mysqli_fetch_assoc($resultado)){

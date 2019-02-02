@@ -44,8 +44,6 @@
     
         <div class="col m12 l12 center espaco_topo">    
           <h3 class="center-align padrao"> Clientes </h3>
-
-            
           <a  href="#sobre" class="btn-floating pulse padrao-fundo"><i class="material-icons center ">keyboard_arrow_down</i></a>
         </div>
         <br>

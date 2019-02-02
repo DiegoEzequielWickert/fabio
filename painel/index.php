@@ -1,5 +1,5 @@
 <?php 
-  session_start();
+ 
   date_default_timezone_set('America/Sao_Paulo');  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,11 +18,14 @@
 <body>
   <nav>
     <div class="nav-wrapper padrao-fundo fixed">
-      <a href="#" class="brand-logo center white-text">Self v1.0 - Crescer</a>
+      <a href="#" class="brand-logo center white-text">Self v1.0.2 - Crescer</a>
+     
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+         
         <li><a href="index.php" class="white-text"><i class="material-icons left">home</i>Inicio</a></li>
-        <li><a href="../" class="white-text">Site</a></li>
+        <li><a href="../" class="white-text"><i class="material-icons left">search</i> Vizualizar Site</a></li>
         <li><a href="logout.php" class="white-text"><i class="material-icons left">settings_power</i>Sair</a></li>
+         Logado como: <?php echo $_SESSION['USU_NOME']; ?>
       </ul>
     </div>
   </nav>
@@ -69,7 +72,7 @@
 
           }else { 
             echo "<h1> Seja Bem vindo ao Self </h1>
-                  <h5 class='justificado'>  O seu sistema  de  gestão de conteudo. É preciso selecionar uma página na aba esquerda. As alterações refletem diretamente no site, então.</h5>
+                  <h5 class='justificado'>  O seu sistema  de  gestão de conteudo. É preciso selecionar uma página na aba esquerda. As alterações refletem diretamente no site, então vamos nessa.</h5>
                  ";
           }
       ?>
@@ -86,7 +89,10 @@
 </footer>
 
 <!--JavaScript at end of body for optimized loading-->
-<script src="../jquery/jquery-2.1.1.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
 <script src="../js/materialize.js"></script>
 <script src="../js/init.js"></script>
 

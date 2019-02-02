@@ -1,6 +1,7 @@
 <?php
+  
     // verifica se foi pasado por direcionamento correto 
-if(isset($_GET['page'])){
+  if(isset($_GET['page'])){
       //verifica se o direcionamento é mesmo para   serviços
   if(!$_GET['page']== 'servicos'){
     header('Location:index.php?acess=danied-clientes');
@@ -9,6 +10,15 @@ if(isset($_GET['page'])){
   }
 
 }
+  if (isset($_GET['sucess'])) {
+     echo '<div class="chip green white-text">        
+               Inserção / Alteração realizada com sucesso!!;        
+          </div>';
+  }else if(isset($_GET['fail'])) {
+     echo '<div class="chip red white-text">        
+              Alguma coisa deu errado!!;        
+          </div>';
+  }
 ?>
 <div class="row">
 	<span class="col l4 m12 s12">
@@ -16,9 +26,6 @@ if(isset($_GET['page'])){
 	</span>
   	<span class="col l4 m12 s12">
   		<a class="waves-effect waves-light btn modal-trigger red " href="?page=delete&p=Clientes"><i class="material-icons large left">delete_forever</i>Excluir Clientes</a>		
-  	</span>
-  	<span class="col l4 m12 s12">
-  		<a class="waves-effect waves-light btn modal-trigger blue " href="#?page=edit&p=Clientes"><i class="material-icons large left">cached</i>Alterar Clientes</a>		
   	</span>
   
   

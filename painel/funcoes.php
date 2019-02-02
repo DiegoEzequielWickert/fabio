@@ -1,6 +1,5 @@
 <?php 
-	//session_start();
-
+	
 
 	function excluir_servico($cod_servico){
 		require('../conecta_db.php');
@@ -12,6 +11,18 @@
 			header('Location:index.php?page=delete&p=Servicos&sucess=true');
 		}else{
 			return 0;
+		}
+	}
+	function excluir_Cliente($cod_cliente){
+		require('../conecta_db.php');
+		$sql = "DELETE FROM `t_clientes` WHERE cli_codigo = ".$cod_cliente;
+		echo "SQL:".$sql;
+		
+		$resultado = mysqli_query($mysqli, $sql); 
+		if($resultado){
+			header('Location:index.php?page=delete&p=Clientes&sucess=true');
+		}else{
+			header('Location:index.php?page=delete&p=Clientes&fail=true');
 		}
 	}
 
@@ -63,14 +74,32 @@
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-		if(isset($_POST['editar_btn'])){
+		if(isset($_POST['edit_servico'])){
 			//se existe uma alteração no nome do serviço
-			echo "Existe um POST com Serviços<br>";	
-			$descricao = $_POST['servico_desc_new'];
-			$ser_cod = $_POST['ser_codigo'];
-			if(atualizaServicoDescricao($descricao,$ser_cod)){
-				header('Location:index.php?page=servicos&edit=sucess');
+			echo "Solicitado uma alteração- Verifica se  servico ou  atividade";
+			
+			if($_GET['edit']=='Servicos'){
+				echo "Existe um POST com Serviços<br>";		
+				$descricao = $_POST['servico_desc_new'];
+				$ser_cod = $_POST['ser_codigo'];
+				if(atualizaServicoDescricao($descricao,$ser_cod)){
+					header('Location:index.php?page=Servicos&edit=sucess');
+				}
+
+			}else if($_GET['edit']=='Atividade'){
+				echo "Existe um POST com Atividades<br>";		
+				$descricao = $_POST['servico_desc_new'];
+				$ati_cod = $_POST['ati_codigo'];
+				if(atualizaAtividadeDescricao($descricao,$ati_cod)){
+					echo "<br>DEU CERTO";
+					header('Location:index.php?page=atividades&edit=sucess');
+				}else{
+					header('Location:index.php?page=atividades&edit=error');
+				}				
+			}else{
+				echo "<h3>Erro de Passagem de Variavel GET  = EDIT[' ']</h3>";
 			}
+			
 		}else if(isset($_POST['excluir_btn'])){
 			/* VERIFICA SE  FOI ENVIADO UM EXCLUIR SERVICOS*/
 			echo ".. Excluindo Serviço...<br>";
@@ -83,7 +112,12 @@
 				echo "Passou aqui:".$_POST['option_servico']."<br>";
 				return excluir_servico($_POST['option_servico']);
 
-			}else{ echo "ERRO NA PASSAGEM DE PARAMETROS PAGE = ENTROU NO EXLUIR (P = ".$_GET['page'].")";}
+			}else if($_GET['page']=="Clientes"){
+				echo "Passou aqui:".$_POST['option_servico']."<br>";
+				return excluir_Cliente($_POST['option_servico']);
+
+			}
+			else{ echo "ERRO NA PASSAGEM DE PARAMETROS PAGE = ENTROU NO EXLUIR (P = ".$_GET['page'].")";}
 
 		
 		}else if(isset($_POST['btn_atividade'])){
@@ -144,6 +178,21 @@
 		}
 
 	}
+	function atualizaAtividadeDescricao($descricao,$ati_codigo){
+		/*
+			* recebe a descricao e o status, se status 
+		*/
+		require('../conecta_db.php');
+
+		$sql = "update t_atividade set ati_descricao = '".$descricao."' where ati_codigo = ".$ati_codigo;
+		$resultado = mysqli_query($mysqli, $sql); 
+		if($resultado){
+			return 1;
+		}else{
+			return 0;
+		}
+
+	}
 
 	function setOrdem($ser_codigo, $ordem){
 		/* recebe  um serviços e  atualiza a ordem passada dele*/
@@ -153,7 +202,7 @@
 		echo "<br>".$sql;
 		$resultado = mysqli_query($mysqli,$sql);
 		if(!$resultado){
-			echo "<h1>ERRO NA ATUALIZAÇÃO NA ORDEM DO SERVIÇO kk".$ser_codigo."</h1><br>";
+			echo "<h1>ERRO NA ATUALIZAÇÃO NA ORDEM DO SERVIÇO ".$ser_codigo."</h1><br>";
 		}
 	}
 	function getTotalServico(){

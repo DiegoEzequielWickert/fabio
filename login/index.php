@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,18 +30,23 @@
                 <div class="card-content col s12 m10 offset-m1 z-depth-1">
                     <form action="verifica.php" method="POST">
                         <div class="row">
-                        <div class="chip">
-                            Usuário ou Senha Inválido! verifique...
-                        </div>
+                        <?php 
+                            if (isset($_SESSION['erro'])) {
+                                echo "<div class='alert'>
+                                    ".$_SESSION['erro']."    
+                                    </div>"; 
+                            }
+                         ?>
+                        
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input id="email" name="mail" autocomplete="off" type="text" required="required" class="validate">
-                                <label for="mail">Usuário:</label>
+                                <input id="email_id" name="mail" autocomplete="off" type="text" required="required" class="validate">
+                                <label for="email_id">Usuário:</label>
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">fingerprint</i>
-                                <input id="senha" name="senha" required="required" autocomplete="off" type="password" class="validate">
-                                <label for="senha">Senha:</label>
+                                <input id="senha_id" name="senha" required="required" autocomplete="off" type="password" class="validate">
+                                <label for="senha_id">Senha:</label>
                             </div>
                             <div class="row center-align">
                                 <div class="g-recaptcha" data-sitekey="6LdFuU4UAAAAAG58qZKTaay8aCOTe1pmECCsQEWu"></div>

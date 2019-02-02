@@ -2,28 +2,24 @@
     session_start(); //inicializa o uso de  sessão
     $_SESSION['erro'] = " ";
     $erro = 100;
-    $_SESSION['usuario'] = 'diego';
-    $_SESSION['codigo'] = '0';
+   
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
         // caso tiver sido enviado  ele sai do  erro  100,  começa  a verificar  tudo de novo
-        
-        echo "Verificou que  tem um POST <br>";
         $erro = 0;
-        
-            
+                    
         if(isset($_POST['enviar'])){ // se os campos  foram preenchidos
             
-            echo "Verificou que  tem um ENVIAR <br>";
+            
             if(isset($_POST['mail'])){
                 $mail =  $_POST['mail']; 
                 echo "Verificou que : passouo usuario <br>";
             }else{
                 $erro = 1;
-                $_SESSION['erro'] = "Campo EMAIL não preenchido";
+                $_SESSION['erro'] = "Campo Usuário não preenchido";
             }
-            if(isset($_POST['mail'])){
-                $email=   $_POST['mail']; 
+            if(isset($_POST['senha'])){
+                $senha = $_POST['senha']; 
                 echo "Verificou que : passouo senha <br>";
             }else{
                 $erro = 2;
@@ -31,19 +27,28 @@
             }
 
             echo "Preparando para Consulta SQL <br>";
+
             if($erro == 0){
                 echo "Verificou que : NÂO EXISTE ERROS <br>";
-                include('conecta_db.php');
-                $sql = "select usu_username as user, usu_senha as senha from t_usuario where  USU_USARNAME ='".$mail."' and USU_SENHA = '".$senha." AND USU_STATUS = 'A' ";
-                echo "SQL: ".$sql;
-                //$query = mysqli_query($mysqli, $sql);
-                if($query){
-                    $_SESSION['usuario'] = '$usarname';
-                    header('Location:cliente.php?sucess=yes'); // redireciona para o index
-
+                include('../conecta_db.php');
+                echo $result_usuario = "select * from t_usuario where  USU_USERNAME ='".$mail."' and USU_SENHA = '".$senha."' AND USU_STATUS = 'A' ";                                                
+                $resultado_usuario = mysqli_query($mysqli, $result_usuario);
+                $resultado = mysqli_fetch_assoc($resultado_usuario);
+                    
+                //Encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
+                if(isset($resultado)){
+                    $_SESSION['USU_NOME'] = $resultado['USU_USERNAME'];
+                    $_SESSION['USU_CODIGO'] = $resultado['USU_CODIGO'];                    
+                    $_SESSION['USU_TIPO'] = $resultado['USU_TIPO'];
+                    $_SESSION['USU_EMAIL'] = $resultado['USU_EMAIL'];
+                    session_destroy( $_SESSION['erro']);
+                    header('Location:../painel/'); // redireciona para o index
+                   
                 }else{
-                    echo " ERRO CATASTROFICO";
+                    $_SESSION['erro'] = "Usuário ou senha inválidos. Tente Novamente" ;                    
+                    header('Location:../login/?error=yes'); // redireciona para o index
                 }
+                
                 
             }
             
@@ -51,8 +56,8 @@
 
 
     }else{
-        echo("Nennhum formulário foi enviado<br>");
-        header('Location:cliente.php?error='.$erro); // redireciona para o  Iindex
+        $_SESSION['erro'] = "Nennhum formulário foi enviado";
+        header('Location:login.php?error='.$erro); // redireciona para o  Iindex
     }
 
 

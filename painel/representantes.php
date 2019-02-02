@@ -1,5 +1,6 @@
 <?php
-    // verifica se foi pasado por direcionamento correto 
+  
+  // verifica se foi pasado por direcionamento correto 
   if(isset($_GET['page'])){
     //verifica se o direcionamento é mesmo para   serviços
     if(!$_GET['page']=='representantes'){
@@ -15,9 +16,7 @@
 	<span class="col l4 m12 s12">
 		<a class="waves-effect waves-light btn modal-trigger green" href="#modal1"><i class="material-icons large left">add</i>Cadastro</a>		
 	</span>
- <span class="col l4 m12 s12">
-  <a class="waves-effect waves-light btn modal-trigger blue " href="?page=edit&p=Representantes"><i class="material-icons large left">cached</i>Alterar</a>		
-</span>
+
 <span class="col l4 m12 s12">
   <a class="waves-effect waves-light btn modal-trigger red" href="?page=delete&p=Representantes"><i class="material-icons large left">delete_forever</i>Excluir</a>    
 </span>

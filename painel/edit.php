@@ -1,11 +1,7 @@
 <?php 
 	// esse arquivo recebe parametros para  excluir coisas;
-
-	if (!isset($_SESSION['usuario'])){
-			//header('location:index.php?acess=danied-edit');
-		echo "<h5 class='red-text'>Verificar Permissão do Usuário</h5>";
-	}
-	echo "<h4 class='blue-text'>Editando - ".$_GET['p']."</h4>";
+	$pagina_p = $_GET['p'];
+	echo "<h4 class='blue-text'>Editando - ".$pagina_p."</h4>";
 
 ?>
 <div class="row">
@@ -14,17 +10,41 @@
 
 </div>
 <div class="row">
-	<code>Descrição Atual:</code> <br><br><br>
+	<code>Descrição Atual:</code> 
 
-	<form class="col s12" action="funcoes.php?edit="<?php echo $_GET['p'];  ?> " method="POST">
+	<form class="col s12" action="funcoes.php?edit=<?php echo $pagina_p;?>" method="POST">
 		<div class="row">
 			<div class="input-field col s12 m12 l6">
-				<input value="<?php echo $_GET['ser_codigo']; ?>" name="ser_codigo" id="disabled" TYPE="hidden">
+				<?php 
+					if ($_GET['p'] == 'Atividade') {
+						echo '<input value="'.$_GET['ati_codigo'].'" name="ati_codigo" type="hidden">';		
+					}else if ($_GET['p'] == 'Servico') {
+						echo '<input value="'.$_GET['ser_codigo'].'" name="ser_codigo" type="hidden">';	
+					}
+				 ?>
+				
 			</div>
 		</div>
 		<div class="row">			
 			<div class="input-field col s6">
-				<input id="input_text" name="servico_desc_new" class="z-depth-4 col m12 l12 s12 red-text" type="text" value="teste de testo" data-length="60">
+			<?php 
+			require('../conecta_db.php');
+
+			if ($_GET['p'] == 'Atividade') {
+						$result = "SELECT ati_codigo, ati_descricao  as descricao FROM t_atividade WHERE ati_codigo =".$_GET['ati_codigo']." order by ati_descricao";
+					}else if ($_GET['p'] == 'Servico') {
+						$result = "SELECT ser_codigo, ser_descricao as descricao FROM t_servicos WHERE SER_CODIGO =".$_GET['ser_codigo']." order by ser_descricao";
+					}
+			  
+			
+			$resultado = mysqli_query($mysqli, $result); 
+			$aux = 0;
+			while($exibe = mysqli_fetch_assoc($resultado)){
+	        //se o status for I ele  seta a classe para  ficar  vermelho 
+				echo '<input id="input_text" name="servico_desc_new" class="z-depth-4 col m12 l12 s12 red-text" type="text" value="'.$exibe['descricao'].'" data-length="60">';
+			}
+			?>
+				
 				<label for="input_text">Descrição</label>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 	// verifica se  foi enviado um POST
 if($_SERVER['REQUEST_METHOD']=='POST'){
 	require('funcoes.php');
