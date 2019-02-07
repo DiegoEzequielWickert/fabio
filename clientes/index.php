@@ -74,8 +74,9 @@
                   <div class="col s12 m12  cartao_cliente">';
                     //<span class="badge red white-text left">Novo!!! </span>
                     echo '<div class="card-panel section center">               
-                    <a class="tooltipped" href="'.$site.' data-position="center" data-tooltip="'.$exibe['cli_descricao'].'">       
+                    <a class="tooltipped" href="'.$site.' data-position="left" data-tooltip="'.$exibe['cli_descricao'].'">       
                       <img class="responsive-img logo_cliente pb" src="logos/'.$imagem.'"/>
+
                     </a>
                     </div>
                   </div>
@@ -112,7 +113,7 @@
     $('.tooltipped').tooltip();
   });
      
-      
+    
   </script>
 
   </body>

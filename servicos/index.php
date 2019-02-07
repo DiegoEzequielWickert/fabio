@@ -1,8 +1,9 @@
 <?php
+/*
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
-
+*/
 define('nivel',2); 
     // DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
 date_default_timezone_set('America/Sao_Paulo'); 

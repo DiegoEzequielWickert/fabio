@@ -30,16 +30,30 @@
       <div class="row">
         <p class ="justificado"> Aqui é realizado o cadastro de representates.</p>
         <code class="red-text">CARACTERES INVÀLIDOS: @ # $ % & ! " ' ? </code>
-        <form action="valida_servico.php" method="POST">
+        <form action="valida_servico.php" method="POST" enctype="multipart/form-data">
+          <div class="file-field input-field">
+            <div class="btn padrao-fundo">
+              <span class="tiny">Imagem Representante</span>
+              <input name="arquivo" type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
          <div class="input-field col s12">          
            <i class="material-icons prefix">mode_edit</i>
            <input id="novo" name="descricao_representante" type="text" data-length="60" required="required" class="validate">
            <label for="novo">Descrição Representante</label>
-         </div>	        
+         </div>
          <div class="input-field col m12 l8">
            <i class="material-icons prefix">fiber_new</i>
-           <input id="cidade" name="cidade_representante" type="text"  required="required" class="validate">
-           <label for="novo">Cidade:</label>
+           <input id="endereco_id" name="endereco_representante" type="text"  required="required" class="validate">
+           <label for="endereco_id">Endereço:</label>
+         </div>      
+         <div class="input-field col m12 l8">
+           <i class="material-icons prefix">fiber_new</i>
+           <input id="cidade_id" name="cidade_representante" type="text"  required="required" class="validate">
+           <label for="cidade_id">Cidade:</label>
          </div>
          <div class="input-field col s4">
            <i class="material-icons prefix">phone</i>
@@ -48,15 +62,16 @@
          </div>
          <div class="input-field col s12">          
            <i class="material-icons prefix">mode_edit</i>
-           <input id="site" name="site_representante" type="text" data-length="60" required="required" class="validate">
-           <label for="site">Site Representante, SEM HTTP ou HTTPS:</label>
+           <input id="email_id" name="email_representante" type="email" data-length="60" required="required" class="validate">
+           <label for="email_id">E-mail</label>
          </div>
        </div>
 
      </div>
      <div class="modal-footer">
-      <button type="submit"  name="btn_cliente" class="btn left padrao-fundo col  l2 m6 s12 push-l5 white-text waves-effect waves-black btn-flat">Cadastrar</a>
+      <button type="submit"  name="btn_representante" class="btn left padrao-fundo col  l2 m6 s12 push-l5 white-text waves-effect waves-black btn-flat">Cadastrar</a>
       </form>
+      <p>
     </div>
   </div>
 </div>

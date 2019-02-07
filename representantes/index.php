@@ -68,7 +68,7 @@ require('../conecta_db.php');
       if ($exibe['rep_logo']!= NULL ) {
         $imagem = $exibe['rep_logo'];
       }else{
-        $imagem = "logo.png";
+        $imagem = "dafault.png";
       }
       echo '
       <div class="col s12 m12 l4 cartao_representante">

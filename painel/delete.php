@@ -11,7 +11,7 @@
 			    	Excluido com sucesso!
 			    	<i class="close material-icons">close</i>
 			  	</div>';
-		}else if ($_GET['fail']) {
+		}else if (isset($_GET['fail'])) {
 			echo '
 				<div class="chip red-text sucesso">
 			    	algo aconteceu de errado, verifique!!
@@ -34,6 +34,9 @@
 		    		}else if($_GET['p']=="Clientes"){
 		    			$sql = "select cli_codigo as codigo, cli_descricao as descricao from t_clientes where cli_status = 'A'  ";
 
+		    		}else if($_GET['p']=="Representantes"){
+		    			$sql = "select rep_codigo as codigo, rep_descricao as descricao from t_representantes where rep_status = 'A'  ";
+
 		    		}else{ echo "ERRO DE PASSAGEM PARAMETRO P<br>";}
 
 		    		$resultado = mysqli_query($mysqli, $sql); 		    		
@@ -47,9 +50,9 @@
 		    </select>
 		    <label>Selecione para  excluir</label>
 		  </div>		
-		  <button type="submit" name="excluir_btn" class="waves-effect waves-light btn-large"> 
-		  <i class="material-icons left">delete_forever</i>
-		  Excluir Serviço</button>
+		  <button type="submit" name="excluir_btn" class="waves-effect red waves-light btn-large"> 
+		  <i class="material-icons  left">delete_forever</i>
+		  Excluir </button>
 		  
 	</form>
   

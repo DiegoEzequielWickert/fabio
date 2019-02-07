@@ -53,11 +53,38 @@
 			return 0;
 		}
 	}
+	function excluir_Representante($rep_codigo){
+		require('../conecta_db.php');
+		$sql = "DELETE FROM t_representantes WHERE rep_codigo = ".$rep_codigo;
+		echo "SQL:".$sql;
+		
+		$resultado = mysqli_query($mysqli, $sql); 
+		if($resultado){
+			header('Location:index.php?page=delete&p=Representantes&sucess=true');
+		}else{
+			return 0;
+		}
+	}
+
 
 	function addCliente($descricao,$imagem, $site, $cidade){
 		require('../conecta_db.php');
 		$sql = "INSERT INTO t_clientes( cli_descricao, cli_status, cli_imagem, cli_site, cli_cidade) VALUES ('"
 		.$descricao."','A','".$imagem."','".$site."','".$cidade."')";
+		echo "SQL NEW:".$sql;
+		
+		$resultado = mysqli_query($mysqli, $sql); 
+		if($resultado){
+			header('Location:index.php?page=clientes&p=Cliente&sucess=true');
+		}else{
+			header('Location:index.php?page=clientes&p=Cliente&fail=true');
+		}
+	}
+	
+	function addRepresentante($descricao,$imagem, $endereco, $cidade,$telefone,$email){
+		require('../conecta_db.php');
+		$sql = "INSERT INTO `t_representantes` (`rep_codigo`, `rep_descricao`, `rep_logo`, `rep_endereco`, `rep_cidade`, `rep_telefone`, `rep_email`, `rep_status`, `rep_datacadastro`) VALUES (NULL,'".$descricao."', '".$imagem."', '".$endereco."', '".$cidade."', '".$telefone."', '".$email."', 'A', CURRENT_TIMESTAMP)";
+		
 		echo "SQL NEW:".$sql;
 		
 		$resultado = mysqli_query($mysqli, $sql); 
@@ -116,6 +143,9 @@
 				echo "Passou aqui:".$_POST['option_servico']."<br>";
 				return excluir_Cliente($_POST['option_servico']);
 
+			}else if ($_GET['page'] == "Representantes"){
+
+				return excluir_Representante($_POST['option_servico']);
 			}
 			else{ echo "ERRO NA PASSAGEM DE PARAMETROS PAGE = ENTROU NO EXLUIR (P = ".$_GET['page'].")";}
 
