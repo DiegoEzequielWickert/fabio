@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<title>Index - Materialize</title>
+	<title>Faça Login</title>
     <!--materialzie css-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
@@ -49,7 +49,9 @@
                                 <label for="senha_id">Senha:</label>
                             </div>
                             <div class="row center-align">
-                                <div class="g-recaptcha" data-sitekey="6LdFuU4UAAAAAG58qZKTaay8aCOTe1pmECCsQEWu"></div>
+                                <div class="g-recaptcha" data-sitekey="6LdFuU4UAAAAAG58qZKTaay8aCOTe1pmECCsQEWu">
+                                    
+                                </div>
                                 <label>
                             </div> 
                             <br><br><br>

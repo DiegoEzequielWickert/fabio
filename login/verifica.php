@@ -6,11 +6,8 @@
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
         // caso tiver sido enviado  ele sai do  erro  100,  começa  a verificar  tudo de novo
-        $erro = 0;
-                    
+        $erro = 0;                    
         if(isset($_POST['enviar'])){ // se os campos  foram preenchidos
-            
-            
             if(isset($_POST['mail'])){
                 $mail =  $_POST['mail']; 
                 echo "Verificou que : passouo usuario <br>";
@@ -18,6 +15,7 @@
                 $erro = 1;
                 $_SESSION['erro'] = "Campo Usuário não preenchido";
             }
+
             if(isset($_POST['senha'])){
                 $senha = $_POST['senha']; 
                 echo "Verificou que : passouo senha <br>";
@@ -33,7 +31,7 @@
                 include('../conecta_db.php');
                 echo $result_usuario = "select * from t_usuario where  USU_USERNAME ='".$mail."' and USU_SENHA = '".$senha."' AND USU_STATUS = 'A' ";                                                
                 $resultado_usuario = mysqli_query($mysqli, $result_usuario);
-                $resultado = mysqli_fetch_assoc($resultado_usuario);
+                echo $resultado = mysqli_fetch_assoc($resultado_usuario);
                     
                 //Encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
                 if(isset($resultado)){
@@ -52,6 +50,9 @@
                 
             }
             
+        }else{
+            $_SESSION['erro'] = "Erro no nome do formulário, alguma coisa está errada.!! :-(";
+            header('Location:../login/index.php?error='.$erro); // redireciona para o  Iindex    
         }
 
 

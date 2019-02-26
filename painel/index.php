@@ -1,5 +1,10 @@
 <?php 
- 
+  session_start();
+  $nivel = "../";
+  if (!isset($_SESSION['USU_NOME'])) {
+   $_SESSION['p'] = $_SERVER['PHP_SELF'];  
+   header("Location:".$nivel."login/");
+  }
   date_default_timezone_set('America/Sao_Paulo');  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,6 +58,7 @@
       <a href="?page=representantes" class="collection-item lista"><i class="material-icons tiny left">work</i>Representantes</a>
       <a href="?page=cont_rec" class="collection-item lista"><i class="material-icons left tiny">mail</i>Contato Recebido</a>
       <a href="?page=mail_mark" class="collection-item lista"><i class="material-icons left tiny">mail</i>E-mail Markting</a>
+      <a href="?page=senha" class="collection-item lista"><i class="material-icons left tiny">rotate_rights</i>Alterar Senha</a>
     </div>
   </ul>
     <div class="col l9">
@@ -68,6 +74,7 @@
             else if ($page == 'delete'){require('delete.php');}
             else if ($page == 'atividades'){require('atividades.php');}
             else if ($page == 'ordem'){require('ordem.php');}
+            else if ($page == 'senha'){require('alterar_senha.php');}
             else { echo "<h1> Erro! -- Nenhuma Página Carregada</h1>";}
 
           }else { 
