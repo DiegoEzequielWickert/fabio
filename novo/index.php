@@ -696,29 +696,8 @@
       </div>
       <div class="container py-md">
         <div class="row  col-md-12 justify-content-between align-items-center">
-          <div class="col-md-12 col-lg-10 mb-5 mb-lg-0">
-            <h2 class="text-white font-weight-light">Deixe seu Contato</h2>
-            <p class="lead text-white mt-4"> Preencha o formulário abaixo e contate nosso time/.</p>            
-          </div>
-        </div>
-        <div class="container">
-          <div class="row"> 
-            <div class="col-md-5 col-lg-4 col-sm-6 ">
-              <label class="text-white">Nome</label>
-              <div class="form-group col-md-12">
-                <input type="text" placeholder="Regular" class="form-control" />
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-4">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
-                  </div>
-                  <input class="form-control" placeholder="Search" type="text">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
+        </div>        
       </div>
       <!-- SVG separator -->
       <div class="separator separator-bottom separator-skew">
@@ -733,7 +712,10 @@
           <div class="col-lg-12 text-center">
             <h2 class="display-3">Formulário de Contato</h2>
             <p class="lead">
-              Preencha o formulário abaixo e contate nosso time/
+
+              |<i class="ni ni-user-run">  </i> 
+              Preencha o formulário abaixo e contate nosso time 
+              <i class="ni ni-user-run"> | </i>
             </p>
             <form action="envia_contato.php" method="POST">
               <div class="row">
@@ -764,172 +746,48 @@
                     <input type="text" name="empresa" placeholder="Sua Empresa" class="form-control is-valid" />
                   </div>
                 </div>
+                <div class="col-md-12">
+                  <div class="form-group has-success">
+                    <textarea name="comentario" class="form-control is-valid" rows="5" placeholder="Deixe um comentário, isso é importante para nós..."></textarea>
+                  </div>
+                </div>
               </div>  
               <div class="container"> 
-                  <div class="col-md-12 mb-5 offset-md-1" style="text-align:left;"> 
-                    <button type="submit" class="btn btn-default form-group">Solicitar Contato</button>
-                  </div>
+                <div class="col-md-12 mb-5 offset-md-1" style="text-align:left;">
+                  <button type="submit" class="btn btn-default btn-lg form-group">
+                   | Solicitar Contato | 
+                    <i class="ni ni-spaceship"> </i></button>
+                </div>
               </div>
-            </form>
-          </div>          
+            </form>            
+          </div>
+
         </div>
         
-      </div>
-    </section>
-    <section class="section section-lg section-shaped">
-      <div class="shape shape-style-1 shape-default">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="container py-md">
-        <div class="row row-grid justify-content-between align-items-center">
-          <div class="col-lg-6">
-            <h3 class="display-3 text-white">A beautiful Design System
-              <span class="text-white">completed with examples</span>
-            </h3>
-            <p class="lead text-white">The Design System comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go. More importantly, looking at them will give you a picture of what you can built with this powerful Bootstrap 4 Design System.</p>
-            <div class="btn-wrapper">
-              <a href="./examples/login.html" class="btn btn-success">Login Page</a>
-              <a href="./examples/register.html" class="btn btn-white">Register Page</a>
+      </div><!--  Fechamento de Container -->
+      <div class="row">
+            <div class="col-md-12"> 
+              <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.3096923413614!2d-53.01116918495146!3d-27.083529383054316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fb3fac85591a13%3A0x8f7ad58d24f9363a!2sCrescer+Contabilidade+e+Consultoria!5e0!3m2!1spt-BR!2sbr!4v1538785402845" width="1600" height="400" frameborder="0" style="border:3" allowfullscreen>
+              </iframe>
             </div>
-          </div>
-          <div class="col-lg-5 mb-lg-auto">
-            <div class="transform-perspective-right">
-              <div class="card bg-secondary shadow border-0">
-                <div class="card-header bg-white pb-5">
-                  <div class="text-muted text-center mb-3">
-                    <small>Sign in with</small>
-                  </div>
-                  <div class="btn-wrapper text-center">
-                    <a href="#" class="btn btn-neutral btn-icon">
-                      <span class="btn-inner--icon">
-                        <img src="./assets/img/icons/common/github.svg">
-                      </span>
-                      <span class="btn-inner--text">Github</span>
-                    </a>
-                    <a href="#" class="btn btn-neutral btn-icon">
-                      <span class="btn-inner--icon">
-                        <img src="./assets/img/icons/common/google.svg">
-                      </span>
-                      <span class="btn-inner--text">Google</span>
-                    </a>
-                  </div>
-                </div>
-                <div class="card-body px-lg-5 py-lg-5">
-                  <div class="text-center text-muted mb-4">
-                    <small>Or sign in with credentials</small>
-                  </div>
-                  <form role="form">
-                    <div class="form-group mb-3">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Email" type="email">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Password" type="password">
-                      </div>
-                    </div>
-                    <div class="custom-control custom-control-alternative custom-checkbox">
-                      <input class="custom-control-input" id=" customCheckLogin2" type="checkbox">
-                      <label class="custom-control-label" for=" customCheckLogin2">
-                        <span>Remember me</span>
-                      </label>
-                    </div>
-                    <div class="text-center">
-                      <button type="button" class="btn btn-primary my-4">Sign in</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <!-- SVG separator -->
-      <div class="separator separator-bottom separator-skew">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
     </section>
-    <section class="section section-lg">
-      <div class="container">
-        <div class="row row-grid justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h2 class="display-3">Do you love this awesome
-              <span class="text-success">Design System for Bootstrap 4?</span>
-            </h2>
-            <p class="lead">Cause if you do, it can be yours for FREE. Hit the button below to navigate to Creative Tim where you can find the Design System in HTML. Start a new project or give an old Bootstrap project a new look!</p>
-            <div class="btn-wrapper">
-              <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-primary mb-3 mb-sm-0">Download HTML</a>
-            </div>
-            <div class="text-center">
-              <h4 class="display-4 mb-5 mt-5">Available on these technologies</h4>
-              <div class="row justify-content-center">
-                <div class="col-lg-2 col-4">
-                  <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Bootstrap 4 - Most popular front-end component library">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg" class="img-fluid">
-                  </a>
-                </div>
-                <div class="col-lg-2 col-4">
-                  <a href=" https://www.creative-tim.com/product/vue-argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Vue.js - The progressive javascript framework">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg" class="img-fluid">
-                  </a>
-                </div>
-                <div class="col-lg-2 col-4">
-                  <a href=" https://www.sketchapp.com/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Sketch - Digital design toolkit">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg" class="img-fluid opacity-3">
-                  </a>
-                </div>
-                <div class="col-lg-2 col-4">
-                  <a href=" https://www.adobe.com/products/photoshop.html" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Adobe Photoshop - Software for digital images manipulation">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg" class="img-fluid opacity-3">
-                  </a>
-                </div>
-                <div class="col-lg-2 col-4">
-                  <a href=" https://angularjs.org/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Angular - One framework. Mobile &amp; desktop">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg" class="img-fluid opacity-3">
-                  </a>
-                </div>
-                <div class="col-lg-2 col-4">
-                  <a href=" https://angularjs.org/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] React - A JavaScript library for building user interfaces">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg" class="img-fluid opacity-3">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
   </main>
   <footer class="footer has-cards">
     <div class="container container-lg">
       <div class="row">
         <div class="col-md-6 mb-5 mb-md-0">
           <div class="card card-lift--hover shadow border-0">
-            <a href="./examples/landing.html" title="Landing Page">
-              <img src="./assets/img/theme/landing.jpg" class="card-img">
+            <a href="./examples/landing.html" title="Crescer Contabilidade">
+             
             </a>
           </div>
         </div>
         <div class="col-md-6 mb-5 mb-lg-0">
           <div class="card card-lift--hover shadow border-0">
-            <a href="./examples/profile.html" title="Profile Page">
-              <img src="./assets/img/theme/profile.jpg" class="card-img">
+            <a href="" title="Logo Crescer Contabilidade">
+                <img  width="100px" src="assets/img/brand/logo1.png" class="card-img">
             </a>
           </div>
         </div>
@@ -938,45 +796,35 @@
     <div class="container">
       <div class="row row-grid align-items-center my-md">
         <div class="col-lg-6">
-          <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
-          <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
+          <h3 class="text-primary font-weight-light mb-2">Obrigado pela sua visita!</h3>
+          <h4 class="mb-0 font-weight-light"> Estamos sempre preparados para atender o cliente, sendo a qualidade do serviço nosso maior diferencial.</h4>
         </div>
-        <div class="col-lg-6 text-lg-center btn-wrapper">
-          <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip" data-original-title="Follow us">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Like us">
-            <i class="fa fa-facebook-square"></i>
-          </a>
-          <a target="_blank" href="https://dribbble.com/creativetim" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" data-toggle="tooltip" data-original-title="Follow us">
-            <i class="fa fa-dribbble"></i>
-          </a>
-          <a target="_blank" href="https://github.com/creativetimofficial" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Star on Github">
-            <i class="fa fa-github"></i>
-          </a>
-        </div>
+         
       </div>
       <hr>
       <div class="row align-items-center justify-content-md-between">
         <div class="col-md-6">
           <div class="copyright">
-            &copy; 2018
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+            &copy; 2019
+            <a href="mailto:dwdiegooo@gmail.com" target="_blank">Diego Wickert</a>.
           </div>
         </div>
         <div class="col-md-6">
           <ul class="nav nav-footer justify-content-end">
             <li class="nav-item">
-              <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+              <a href="#home" class="nav-link">Inicio</a>
+            </li>
+             <li class="nav-item">
+              <a href="#sobre" class="nav-link">Sobre</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+              <a href="#clientes" class="nav-link">Clientes</a>
             </li>
-            <li class="nav-item">
-              <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+             <li class="nav-item">
+              <a href="#representantes" class="nav-link">Representantes</a>
             </li>
-            <li class="nav-item">
-              <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
+             <li class="nav-item">
+              <a href="#contato" class="nav-link">Contato</a>
             </li>
           </ul>
         </div>
