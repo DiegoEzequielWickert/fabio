@@ -17441,11 +17441,11 @@ textarea[resize='horizontal']
 .section-shaped .shape-style-1.shape-primary
 {
     /*aqui muda o  fundo*/
-    background: linear-gradient(150deg, #7d7f8a 15%, #54555d 70%, #8898aa 94%);
+    background: linear-gradient(120deg, #0f0f15d9 35%, #2a304f 77%, #0e61c0 94%);
 }
 .section-shaped .shape-style-1.shape-default
 {
-    background: linear-gradient(150deg, #7d7f8a 15%, #54555d 70%, #8898aa 94%);
+    background: linear-gradient(120deg, #0f0f15d9 35%, #2a304f 77%, #0e61c0 94%);
 }
 .section-shaped .shape-style-1.shape-light
 {
@@ -18800,4 +18800,7 @@ img:hover, .pb_reverse{
     height: 300px;
     margin-top: 70px;
     margin-bottom: 70px;
+}
+table{
+    font-size: 10pt;
 }
